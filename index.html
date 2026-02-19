@@ -1,229 +1,157 @@
 <!doctype html>
 <html lang="pt-PT">
 <head>
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '2483137995435500');
-fbq('track', 'PageView');
-setTimeout(function() { fbq('track', 'ViewContent'); }, 15000);
-</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chef Amellié Bittencourt - 15 Receitas Protocolo Mounjaro</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root { --primary: #6b2d3d; --accent: #c17a7a; }
+        body { font-family: 'Inter', sans-serif; background-color: #fcfbf9; color: #333; overflow-x: hidden; }
+        h1, h2, h3 { font-family: 'Playfair Display', serif; }
+        
+        /* Animação de Pular/Flutuar nos Cards */
+        .recipe-card { 
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
+            cursor: pointer;
+            border: 1px solid #f3f4f6;
+        }
+        .recipe-card:hover { 
+            transform: translateY(-12px) scale(1.02); 
+            box-shadow: 0 25px 50px -12px rgba(107, 45, 61, 0.12);
+            border-color: var(--accent);
+        }
 
-<meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Chef Amellié Bittencourt - Receitas Mounjaro &amp; Low Carb</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
-  <style>
-    body { box-sizing: border-box; font-family: 'Inter', sans-serif; background-color: #fcfbf9; color: #333; }
-    :root { --primary: #6b2d3d; --accent: #c17a7a; --surface: #ffffff; }
-    h1, h2, h3, h4 { font-family: 'Playfair Display', serif; }
-    
-    .btn-gold { background: linear-gradient(135deg, #d4a373 0%, #b58253 100%); color: white; transition: all 0.3s ease; }
-    .btn-gold:hover { transform: scale(1.05); filter: brightness(1.1); box-shadow: 0 10px 30px rgba(212, 163, 115, 0.4); }
-    
-    .recipe-filter.active { background-color: var(--primary); color: white; border-color: var(--primary); }
-    
-    .fade-in { animation: fadeIn 0.8s ease-out forwards; }
-    @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
-    
-    /* ANIMAÇÃO DE PULAR QUE VOCÊ PEDIU */
-    .recipe-card { transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); cursor: pointer; border: 1px solid transparent; }
-    .recipe-card:hover { transform: translateY(-12px); box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1); border-color: var(--accent); }
-    .recipe-card.favorited { border: 2px solid var(--accent); background: rgba(193, 122, 122, 0.05); }
-  </style>
+        .btn-gold { 
+            background: linear-gradient(135deg, #d4a373 0%, #b58253 100%); 
+            animation: pulse-button 2s infinite;
+        }
+        @keyframes pulse-button {
+            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(212, 163, 115, 0.4); }
+            70% { transform: scale(1.03); box-shadow: 0 0 0 10px rgba(212, 163, 115, 0); }
+            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(212, 163, 115, 0); }
+        }
+        .filter-active { background: var(--primary) !important; color: white !important; border-color: var(--primary) !important; }
+        .no-scroll { overflow: hidden; }
+    </style>
 </head>
-<body class="flex flex-col min-h-full">
-  <header class="bg-white/90 backdrop-blur-lg sticky top-0 z-50 border-b border-gray-100 shadow-sm">
-   <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-    <div class="flex items-center gap-3">
-     <div class="w-12 h-12 rounded-full bg-[var(--primary)] flex items-center justify-center text-white text-xl font-bold border-2 border-[var(--accent)]">AB</div>
-     <div>
-      <h1 class="text-xl font-bold text-[var(--primary)] leading-tight">Chef Amélie</h1>
-      <p class="text-[10px] tracking-[0.2em] uppercase text-[var(--accent)] font-semibold">Bittencourt</p>
-     </div>
-    </div>
-    <nav class="hidden md:flex gap-8 text-sm font-medium text-gray-600">
-        <a href="#sobre" class="hover:text-[var(--primary)] transition">Sobre</a> 
-        <a href="#receitas" class="hover:text-[var(--primary)] transition">Receitas</a> 
-        <a href="https://www.instagram.com/chefamelliebitt?igsh=aDdmMTAzaWJyd2Rw" target="_blank" class="hover:text-[var(--primary)] transition">Instagram</a>
-    </nav> 
-    <a href="https://pay.kirvano.com/22ef5fd4-6ee2-4df6-9371-710c50758e73" target="_blank" class="btn-gold px-6 py-2 rounded-xl font-bold shadow-md">Comprar agora</a>
-   </div>
-  </header>
+<body>
 
-  <main class="flex-grow">
-   <section class="relative bg-[var(--primary)] py-20 overflow-hidden">
-    <div class="container mx-auto px-6 relative z-10">
-     <div class="grid md:grid-cols-2 gap-12 items-center">
-      <div class="text-white space-y-6 fade-in order-2 md:order-1">
-        <span class="inline-flex items-center gap-2 px-4 py-2 bg-white/10 rounded-full text-xs font-bold tracking-widest uppercase border border-white/20 backdrop-blur-sm">Protocolo Mounjaro &amp; Low Carb</span>
-       <h2 class="text-4xl md:text-6xl font-bold leading-tight">Saúde no prato,<br> resultados no corpo.</h2>
-       <p class="text-lg text-gray-200 font-light max-w-xl leading-relaxed">O método exclusivo para maximizar o seu tratamento, mantendo a saciedade e preservando a massa muscular.</p>
-       <div class="flex gap-4 pt-4"><a href="#receitas" class="bg-white text-[var(--primary)] px-8 py-3 rounded-xl font-bold hover:bg-gray-100 transition shadow-xl">Ver Receitas</a></div>
-      </div>
-      <div class="flex justify-center order-1 md:order-2">
-       <div class="relative w-80 h-80 md:w-96 md:h-96">
-        <div class="absolute inset-0 bg-gradient-to-br from-[var(--accent)] to-white/10 rounded-full blur-2xl opacity-50"></div>
-        <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80" alt="Prato Saudável" class="relative w-full h-full object-cover rounded-full border-8 border-white/10 shadow-2xl">
-       </div>
-      </div>
-     </div>
-    </div>
-   </section>
-
-   <section id="sobre" class="py-20 bg-white">
-    <div class="container mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
-      <div class="relative flex justify-center">
-        <div class="relative w-72 h-96">
-         <div class="absolute top-4 left-4 w-full h-full border-2 border-[var(--accent)] rounded-3xl"></div>
-         <img src="https://i.imgur.com/ZyPQVhk.jpg" alt="Chef Amellie" class="relative z-10 w-full h-full object-cover rounded-3xl shadow-xl" onerror="this.src='https://via.placeholder.com/400x600?text=Chef+Amellie'">
+    <header class="bg-white/90 backdrop-blur-md sticky top-0 z-50 border-b border-gray-100 py-4">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <div class="w-10 h-10 bg-[var(--primary)] rounded-full flex items-center justify-center text-white font-bold shadow-inner">AB</div>
+                <span class="text-xl font-bold text-[var(--primary)] tracking-tight">Chef Amellié</span>
+            </div>
+            <a href="https://pay.kirvano.com/22ef5fd4-6ee2-4df6-9371-710c50758e73" target="_blank" class="btn-gold px-6 py-2 rounded-full font-bold text-white shadow-lg text-sm transition-all">Comprar Agora</a>
         </div>
-      </div>
-      <div class="space-y-6">
-       <div><span class="text-[var(--accent)] text-sm font-bold uppercase tracking-widest">Sobre a Chef</span>
-        <h3 class="text-4xl font-bold text-[var(--primary)] mt-2">Amellié Bittencourt</h3>
-       </div>
-       <p class="text-gray-600 leading-relaxed">Especialista em nutrição funcional e culinária low carb, dedico-me a criar receitas que transformam vidas. O meu método foca em alta proteína e baixo índice glicémico.</p>
-       <div class="bg-blue-50 p-4 rounded-xl border border-blue-200">
-        <h4 class="font-bold text-blue-900 mb-2">Protocolo Mounjaro</h4>
-        <p class="text-sm text-blue-800 leading-relaxed">Todas as receitas foram desenvolvidas especificamente para potencializar os resultados do Mounjaro, mantendo o equilíbrio nutricional ideal.</p>
-       </div>
-      </div>
-    </div>
-   </section>
+    </header>
 
-   <section id="receitas" class="py-20 bg-gray-50">
-    <div class="container mx-auto px-6 text-center">
-      <div class="mb-12">
-        <span class="text-[var(--accent)] text-sm font-bold uppercase tracking-widest">O Menu</span>
-        <h3 class="text-4xl font-bold text-[var(--primary)] mt-2">15 Receitas Exclusivas</h3>
-      </div>
-      <div class="flex flex-wrap gap-3 justify-center mb-12">
-        <button class="recipe-filter active px-6 py-2 rounded-full border-2 border-[var(--primary)] font-bold transition" onclick="filterRecipes('all', this)">Todas</button>
-        <button class="recipe-filter px-6 py-2 rounded-full border-2 border-gray-300 text-gray-600 font-bold hover:border-[var(--primary)] transition" onclick="filterRecipes('lunch', this)">ALMOÇO</button>
-        <button class="recipe-filter px-6 py-2 rounded-full border-2 border-gray-300 text-gray-600 font-bold hover:border-[var(--primary)] transition" onclick="filterRecipes('snack', this)">LANCHE</button>
-      </div>
-      <div id="recipes-grid" class="grid md:grid-cols-3 gap-8"></div>
-    </div>
-   </section>
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6 text-center">
+            <span class="text-[var(--accent)] font-bold tracking-widest uppercase text-xs">Exclusivo Mounjaro</span>
+            <h2 class="text-4xl font-bold text-[var(--primary)] mt-2">As 15 Receitas Estratégicas</h2>
+            <p class="text-gray-500 mt-4 max-w-xl mx-auto">Clique nos pratos para ver os detalhes nutricionais e o modo de preparo.</p>
+            
+            <div class="flex flex-wrap justify-center gap-2 mt-10">
+                <button onclick="filterContent('all', this)" class="filter-btn filter-active px-6 py-2 rounded-full border border-gray-200 text-sm font-semibold transition-all">Todas</button>
+                <button onclick="filterContent('lunch', this)" class="filter-btn px-6 py-2 rounded-full border border-gray-200 text-sm font-semibold transition-all hover:border-[var(--accent)]">Almoço/Jantar</button>
+                <button onclick="filterContent('snack', this)" class="filter-btn px-6 py-2 rounded-full border border-gray-200 text-sm font-semibold transition-all hover:border-[var(--accent)]">Lanches/Doces</button>
+            </div>
 
-   <section class="py-20 bg-white text-center">
-    <div class="container mx-auto px-6">
-        <h3 class="text-3xl font-bold text-[var(--primary)] mb-8">O que dizem os clientes</h3>
-        <div class="grid md:grid-cols-3 gap-6">
-            <div class="p-6 bg-gray-50 rounded-2xl">
-                <p class="italic text-gray-600">"As receitas ajudaram muito com as náuseas do início. O bife com cogumelos é nota 10!"</p>
-                <p class="mt-4 font-bold text-[var(--primary)]">Mariana S.</p>
-            </div>
-            <div class="p-6 bg-gray-50 rounded-2xl">
-                <p class="italic text-gray-600">"Finalmente bati minha meta de proteína diária. Perdi 8kg sem sofrimento."</p>
-                <p class="mt-4 font-bold text-[var(--primary)]">Ricardo F.</p>
-            </div>
-            <div class="p-6 bg-gray-50 rounded-2xl">
-                <p class="italic text-gray-600">"Receitas fáceis e rápidas. O guia de snacks salvou meu dia no trabalho."</p>
-                <p class="mt-4 font-bold text-[var(--primary)]">Juliana M.</p>
-            </div>
+            <div id="recipe-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+                </div>
+        </div>
+    </section>
+
+    <div id="modal" class="hidden fixed inset-0 bg-black/80 z-[100] flex items-center justify-center p-4 backdrop-blur-sm transition-opacity" onclick="if(event.target === this) closeModal()">
+        <div class="bg-white rounded-[2.5rem] max-w-lg w-full max-h-[90vh] overflow-y-auto p-8 relative shadow-2xl">
+            <button onclick="closeModal()" class="absolute top-6 right-6 text-gray-400 hover:text-black transition-colors text-2xl">✕</button>
+            <div id="modal-content"></div>
         </div>
     </div>
-   </section>
 
-   <section class="py-20 bg-gray-50 text-center">
-    <div class="container mx-auto px-6">
-        <div class="bg-[var(--primary)] rounded-3xl p-12 text-white">
-            <h3 class="text-3xl font-bold mb-4">Aproveite a oferta limitada</h3>
-            <p class="mb-8 opacity-90 text-xl">De R$ 49,90 por apenas <span class="text-3xl font-bold">R$ 29,90</span></p>
-            <a href="https://pay.kirvano.com/22ef5fd4-6ee2-4df6-9371-710c50758e73" target="_blank" class="btn-gold px-12 py-4 rounded-2xl font-bold text-xl inline-block shadow-2xl">Comprar Agora</a>
-        </div>
-    </div>
-   </section>
-  </main>
+    <script>
+        const recipes = [
+            { id: 1, cat: 'lunch', name: "Bife à Portuguesa", emoji: "🥩", prot: "42g", cal: "380", carbs: "8g", tip: "Use alcatra ou filé mignon para menor teor de gordura saturada." },
+            { id: 2, cat: 'lunch', name: "Salmão com Crosta de Ervas", emoji: "🐟", prot: "38g", cal: "350", carbs: "4g", tip: "O Ômega-3 ajuda na saciedade prolongada." },
+            { id: 3, cat: 'lunch', name: "Frango ao Caril Low Carb", emoji: "🥘", prot: "35g", cal: "310", carbs: "7g", tip: "Substitua o arroz por couve-flor picada." },
+            { id: 4, cat: 'snack', name: "Mousse de Proteína e Cacau", emoji: "🍫", prot: "25g", cal: "180", carbs: "5g", tip: "Use whey de baunilha ou chocolate 70%." },
+            { id: 5, cat: 'lunch', name: "Esparguete de Curgete com Bolonhesa", emoji: "🍝", prot: "32g", cal: "290", carbs: "9g", tip: "Corte a curgete em tiras finas para simular massa." },
+            { id: 6, cat: 'snack', name: "Pão de Queijo Fit (3 Ingredientes)", emoji: "🥯", prot: "12g", cal: "140", carbs: "10g", tip: "Feito com ovo, queijo e um pouco de tapioca." },
+            { id: 7, cat: 'lunch', name: "Omelete Premium de Espinafres", emoji: "🍳", prot: "22g", cal: "210", carbs: "3g", tip: "Excelente para o café da manhã ou jantar leve." },
+            { id: 8, cat: 'lunch', name: "Bowl de Atum e Abacate", emoji: "🥣", prot: "30g", cal: "340", carbs: "6g", tip: "Gorduras boas que estabilizam a insulina." },
+            { id: 9, cat: 'snack', name: "Batido Energético de Frutos Vermelhos", emoji: "🥤", prot: "20g", cal: "160", carbs: "12g", tip: "Baixo índice glicêmico para evitar picos." },
+            { id: 10, cat: 'lunch', name: "Lombinho de Porco com Alecrim", emoji: "🍖", prot: "36g", cal: "320", carbs: "0g", tip: "Proteína magra de alta biodisponibilidade." },
+            { id: 11, cat: 'snack', name: "Cookies de Aveia e Proteína", emoji: "🍪", prot: "15g", cal: "190", carbs: "14g", tip: "Perfeito para levar na bolsa e evitar furos na dieta." },
+            { id: 12, cat: 'lunch', name: "Quiche Sem Massa de Alho Francês", emoji: "🥧", prot: "18g", cal: "230", carbs: "7g", tip: "O alho francês ajuda na digestão lenta." },
+            { id: 13, cat: 'snack', name: "Iogurte Grego com Amêndoas", emoji: "🍦", prot: "16g", cal: "200", carbs: "8g", tip: "Combine crocância com cremosidade." },
+            { id: 14, cat: 'lunch', name: "Tiras de Vitela com Pimentos", emoji: "🔔", prot: "34g", cal: "300", carbs: "5g", tip: "Pimentos ricos em vitamina C para colágeno." },
+            { id: 15, cat: 'snack', name: "Gelatina de Proteína", emoji: "🍮", prot: "20g", cal: "90", carbs: "0g", tip: "Opção zero carbo para ceia." }
+        ];
 
-  <div id="recipe-modal" class="hidden fixed inset-0 bg-black/60 z-50 flex items-center justify-center p-4 backdrop-blur-sm overflow-y-auto">
-   <div class="bg-white rounded-2xl max-w-2xl w-full shadow-2xl my-8">
-    <div class="flex justify-between items-start p-8 border-b">
-     <div><h3 id="modal-name" class="text-3xl font-bold text-[var(--primary)]"></h3><span id="modal-tag" class="text-2xl mt-2"></span></div>
-     <button onclick="closeRecipeModal()" class="text-xl font-bold hover:text-gray-500">✕</button>
-    </div>
-    <div class="p-8 space-y-6 max-h-[70vh] overflow-y-auto">
-     <div class="grid grid-cols-3 gap-3 bg-gray-50 p-4 rounded-xl text-center">
-      <div><p class="text-gray-400 text-xs uppercase">Kcal</p><p id="modal-cal" class="font-bold"></p></div>
-      <div><p class="text-gray-400 text-xs uppercase">Proteína</p><p id="modal-prot" class="font-bold text-green-600"></p></div>
-      <div><p class="text-gray-400 text-xs uppercase">Tempo</p><p id="modal-time" class="font-bold"></p></div>
-     </div>
-     <div><h4 class="font-bold text-[var(--primary)] mb-3">Ingredientes</h4><ul id="modal-ings" class="space-y-2 text-sm text-gray-600 list-disc pl-4"></ul></div>
-     <div class="bg-yellow-50 p-4 rounded-xl border border-yellow-100"><p class="font-bold text-yellow-800 text-sm">Dica da Chef</p><p id="modal-tip" class="text-sm text-yellow-700 italic"></p></div>
-    </div>
-   </div>
-  </div>
+        function render(data) {
+            const grid = document.getElementById('recipe-grid');
+            grid.innerHTML = data.map(r => `
+                <div class="recipe-card bg-white p-8 rounded-[2.5rem] shadow-sm flex flex-col items-center text-center" onclick="openModal(${r.id})">
+                    <div class="text-6xl mb-4 transform transition-transform hover:scale-110">${r.emoji}</div>
+                    <h4 class="text-xl font-bold text-[var(--primary)] mb-2">${r.name}</h4>
+                    <div class="flex justify-center gap-2 mt-4">
+                        <span class="bg-green-50 text-green-700 text-[10px] font-bold px-3 py-1 rounded-full uppercase border border-green-100">${r.prot} Proteína</span>
+                        <span class="bg-gray-50 text-gray-600 text-[10px] font-bold px-3 py-1 rounded-full uppercase border border-gray-100">${r.cal} Kcal</span>
+                    </div>
+                </div>
+            `).join('');
+        }
 
-  <footer class="bg-[var(--primary)] text-white py-12 text-center border-t border-white/10">
-    <p class="text-sm opacity-60">© 2024 Chef Amellié Bittencourt. Todos os direitos reservados.</p>
-  </footer>
+        function filterContent(cat, btn) {
+            document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('filter-active'));
+            btn.classList.add('filter-active');
+            if(cat === 'all') render(recipes);
+            else render(recipes.filter(r => r.cat === cat));
+        }
 
-  <script>
-    const recipes = [
-      { id: 1, name: "Bife à Portuguesa com Cogumelos", category: "lunch", emoji: "🥩", time: "25 min", cal: 380, prot: "42g", ings: ["400g bife alcatra", "200g cogumelos", "1 cebola roxa", "Azeite", "Vinho branco"], tip: "O vinho branco ajuda a deglacear os sucos da carne, criando um molho rico sem excesso de gordura." },
-      { id: 2, name: "Salmão com Crosta de Ervas", category: "lunch", emoji: "🐟", time: "20 min", cal: 350, prot: "35g", ings: ["Filé de salmão", "Ervas finas", "Limão", "Azeite de oliva"], tip: "O ômega-3 do salmão é essencial para a saciedade prolongada no tratamento." },
-      { id: 3, name: "Frango ao Caril Low Carb", category: "lunch", emoji: "🥘", time: "30 min", cal: 310, prot: "38g", ings: ["Peito de frango", "Leite de coco", "Caril", "Brócolos"], tip: "O caril é um excelente anti-inflamatório natural." },
-      { id: 4, name: "Omelete de Espinafres e Feta", category: "lunch", emoji: "🍳", time: "10 min", cal: 240, prot: "22g", ings: ["3 ovos", "Espinafres frescos", "Queijo feta", "Pimenta"], tip: "Uma opção rápida para um jantar leve com alta densidade nutricional." },
-      { id: 5, name: "Bowl de Atum e Abacate", category: "lunch", emoji: "🥣", time: "5 min", cal: 320, prot: "30g", ings: ["Atum ao natural", "Meio abacate", "Tomate cereja", "Rúcula"], tip: "Gorduras boas aliadas à proteína rápida." },
-      { id: 6, name: "Pão de Queijo Fit", category: "snack", emoji: "🥯", time: "15 min", cal: 180, prot: "12g", ings: ["Ovo", "Tapioca (1 colher)", "Queijo cottage"], tip: "Perfeito para o lanche da tarde sem quebrar o protocolo." },
-      { id: 7, name: "Mousse de Cacau e Whey", category: "snack", emoji: "🍫", time: "5 min", cal: 150, prot: "25g", ings: ["Iogurte grego", "Whey protein", "Cacau 100%"], tip: "Mata a vontade de doce mantendo o aporte proteico." },
-      { id: 8, name: "Cookies de Aveia e Proteína", category: "snack", emoji: "🍪", time: "20 min", cal: 190, prot: "15g", ings: ["Aveia em flocos", "Banana", "Proteína em pó"], tip: "Ótima opção para levar na bolsa e evitar furos na dieta." },
-      { id: 9, name: "Iogurte com Amêndoas", category: "snack", emoji: "🍦", time: "2 min", cal: 210, prot: "14g", ings: ["Iogurte natural", "Amêndoas picadas", "Canela"], tip: "A canela ajuda no controle da glicemia." },
-      { id: 10, name: "Quiche Sem Massa", category: "lunch", emoji: "🥧", time: "35 min", cal: 260, prot: "20g", ings: ["Ovos", "Ricota", "Alho francês", "Frango desfiado"], tip: "Prepare no domingo e tenha almoços prontos para a semana." },
-      { id: 11, name: "Tiras de Vitela com Pimentos", category: "lunch", emoji: "🔔", time: "15 min", cal: 330, prot: "36g", ings: ["Vitela", "Pimento verde/vermelho", "Cebola"], tip: "Pimentos são ricos em vitamina C, auxiliando na absorção de nutrientes." },
-      { id: 12, name: "Esparguete de Curgete", category: "lunch", emoji: "🍝", time: "15 min", cal: 280, prot: "25g", ings: ["Curgete", "Carne picada magra", "Molho tomate caseiro"], tip: "Substituição perfeita para massas tradicionais de alto índice glicémico." },
-      { id: 13, name: "Gelatina de Proteína", category: "snack", emoji: "🍮", time: "10 min", cal: 90, prot: "20g", ings: ["Gelatina zero", "Whey de baunilha"], tip: "Volume alimentar com baixíssimas calorias para ceia." },
-      { id: 14, name: "Batido Energético", category: "snack", emoji: "🥤", time: "3 min", cal: 170, prot: "22g", ings: ["Leite de amêndoas", "Frutos vermelhos", "Whey"], tip: "Ideal para o pós-treino ou lanche rápido." },
-      { id: 15, name: "Lombinho com Alecrim", category: "lunch", emoji: "🍖", time: "40 min", cal: 340, prot: "38g", ings: ["Lombo de porco magro", "Alecrim fresco", "Alho"], tip: "O alecrim ajuda na digestão e dá um aroma incrível." }
-    ];
+        function openModal(id) {
+            const r = recipes.find(x => x.id === id);
+            document.body.classList.add('no-scroll');
+            document.getElementById('modal-content').innerHTML = `
+                <div class="text-7xl text-center mb-6">${r.emoji}</div>
+                <h3 class="text-3xl font-bold text-[var(--primary)] text-center mb-6 leading-tight">${r.name}</h3>
+                <div class="grid grid-cols-3 gap-4 mb-8 text-center">
+                    <div class="bg-gray-50 p-4 rounded-2xl border border-gray-100">
+                        <p class="text-[10px] text-gray-400 font-bold uppercase mb-1">Carbs</p>
+                        <p class="font-bold text-gray-700">${r.carbs}</p>
+                    </div>
+                    <div class="bg-green-50 p-4 rounded-2xl border border-green-100">
+                        <p class="text-[10px] text-green-500 font-bold uppercase mb-1">Prot</p>
+                        <p class="font-bold text-green-700">${r.prot}</p>
+                    </div>
+                    <div class="bg-orange-50 p-4 rounded-2xl border border-orange-100">
+                        <p class="text-[10px] text-orange-400 font-bold uppercase mb-1">Kcal</p>
+                        <p class="font-bold text-orange-700">${r.cal}</p>
+                    </div>
+                </div>
+                <div class="bg-yellow-50 p-6 rounded-[1.5rem] border border-yellow-100 mb-8">
+                    <p class="font-bold text-yellow-800 mb-2 flex items-center gap-2">
+                        <span>💡</span> Dica da Chef Amellié:
+                    </p>
+                    <p class="text-yellow-700 italic text-sm leading-relaxed">"${r.tip}"</p>
+                </div>
+                <a href="https://pay.kirvano.com/22ef5fd4-6ee2-4df6-9371-710c50758e73" target="_blank" class="btn-gold block text-center py-4 rounded-2xl font-bold text-white text-lg transition-transform hover:scale-[1.02]">Garantir Guia Completo</a>
+            `;
+            document.getElementById('modal').classList.remove('hidden');
+        }
 
-    function renderRecipes(filter = 'all') {
-      const grid = document.getElementById('recipes-grid');
-      grid.innerHTML = '';
-      const filtered = filter === 'all' ? recipes : recipes.filter(r => r.category === filter);
-      filtered.forEach(recipe => {
-        grid.innerHTML += `
-          <div class="recipe-card bg-white p-6 rounded-2xl shadow-sm" onclick="openRecipeModal(${recipe.id})">
-            <div class="text-4xl mb-4">${recipe.emoji}</div>
-            <h4 class="font-bold text-[var(--primary)] text-lg mb-2">${recipe.name}</h4>
-            <div class="flex justify-between text-xs text-gray-500 font-medium">
-              <span>⏱️ ${recipe.time}</span>
-              <span class="text-green-600">💪 ${recipe.prot} Prot</span>
-            </div>
-          </div>`;
-      });
-    }
+        function closeModal() {
+            document.getElementById('modal').classList.add('hidden');
+            document.body.classList.remove('no-scroll');
+        }
 
-    function openRecipeModal(id) {
-      const r = recipes.find(rec => rec.id === id);
-      document.getElementById('modal-name').textContent = r.name;
-      document.getElementById('modal-tag').textContent = r.emoji;
-      document.getElementById('modal-time').textContent = r.time;
-      document.getElementById('modal-cal').textContent = r.cal;
-      document.getElementById('modal-prot').textContent = r.prot;
-      document.getElementById('modal-ings').innerHTML = r.ings.map(i => `<li>${i}</li>`).join('');
-      document.getElementById('modal-tip').textContent = r.tip;
-      document.getElementById('recipe-modal').classList.remove('hidden');
-    }
+        // Inicializar
+        render(recipes);
+    </script>
 
-    function closeRecipeModal() { document.getElementById('recipe-modal').classList.add('hidden'); }
-
-    function filterRecipes(cat, btn) {
-      document.querySelectorAll('.recipe-filter').forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      renderRecipes(cat);
-    }
-
-    renderRecipes();
-  </script>
 </body>
 </html>
