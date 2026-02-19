@@ -1,6 +1,20 @@
 <!doctype html>
 <html lang="pt-PT">
 <head>
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '2483137995435500');
+    fbq('track', 'PageView');
+    setTimeout(function() { fbq('track', 'ViewContent'); }, 15000);
+    </script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chef Amellié Bittencourt - 15 Receitas Protocolo Mounjaro</title>
@@ -9,19 +23,17 @@
     
     <style>
         :root { --primary: #6b2d3d; --accent: #c17a7a; }
-        body { font-family: 'Inter', sans-serif; background-color: #fcfbf9; color: #333; overflow-x: hidden; }
+        body { font-family: 'Inter', sans-serif; background-color: #fcfbf9; color: #333; }
         h1, h2, h3 { font-family: 'Playfair Display', serif; }
         
-        /* Animação de Pular/Flutuar nos Cards */
+        /* ANIMAÇÃO DE PULAR/FLUTUAR */
         .recipe-card { 
             transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
             cursor: pointer;
-            border: 1px solid #f3f4f6;
         }
         .recipe-card:hover { 
-            transform: translateY(-12px) scale(1.02); 
-            box-shadow: 0 25px 50px -12px rgba(107, 45, 61, 0.12);
-            border-color: var(--accent);
+            transform: translateY(-15px) scale(1.02); 
+            box-shadow: 0 25px 50px -12px rgba(107, 45, 61, 0.15);
         }
 
         .btn-gold { 
@@ -29,12 +41,11 @@
             animation: pulse-button 2s infinite;
         }
         @keyframes pulse-button {
-            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(212, 163, 115, 0.4); }
-            70% { transform: scale(1.03); box-shadow: 0 0 0 10px rgba(212, 163, 115, 0); }
-            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(212, 163, 115, 0); }
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
         }
-        .filter-active { background: var(--primary) !important; color: white !important; border-color: var(--primary) !important; }
-        .no-scroll { overflow: hidden; }
+        .filter-active { background: var(--primary) !important; color: white !important; }
     </style>
 </head>
 <body>
@@ -42,10 +53,13 @@
     <header class="bg-white/90 backdrop-blur-md sticky top-0 z-50 border-b border-gray-100 py-4">
         <div class="container mx-auto px-6 flex justify-between items-center">
             <div class="flex items-center gap-2">
-                <div class="w-10 h-10 bg-[var(--primary)] rounded-full flex items-center justify-center text-white font-bold shadow-inner">AB</div>
-                <span class="text-xl font-bold text-[var(--primary)] tracking-tight">Chef Amellié</span>
+                <div class="w-10 h-10 bg-[var(--primary)] rounded-full flex items-center justify-center text-white font-bold">AB</div>
+                <span class="text-xl font-bold text-[var(--primary)]">Chef Amellié</span>
             </div>
-            <a href="https://pay.kirvano.com/22ef5fd4-6ee2-4df6-9371-710c50758e73" target="_blank" class="btn-gold px-6 py-2 rounded-full font-bold text-white shadow-lg text-sm transition-all">Comprar Agora</a>
+            <nav class="hidden md:flex gap-8 text-sm font-semibold text-gray-600">
+                <a href="https://www.instagram.com/chefamelliebitt?igsh=aDdmMTAzaWJyd2Rw" target="_blank" class="hover:text-[var(--primary)] transition">Instagram</a>
+            </nav>
+            <a href="https://pay.kirvano.com/22ef5fd4-6ee2-4df6-9371-710c50758e73" target="_blank" class="btn-gold px-6 py-2 rounded-full font-bold text-white shadow-lg text-sm">Comprar Agora</a>
         </div>
     </header>
 
@@ -56,9 +70,9 @@
             <p class="text-gray-500 mt-4 max-w-xl mx-auto">Clique nos pratos para ver os detalhes nutricionais e o modo de preparo.</p>
             
             <div class="flex flex-wrap justify-center gap-2 mt-10">
-                <button onclick="filterContent('all', this)" class="filter-btn filter-active px-6 py-2 rounded-full border border-gray-200 text-sm font-semibold transition-all">Todas</button>
-                <button onclick="filterContent('lunch', this)" class="filter-btn px-6 py-2 rounded-full border border-gray-200 text-sm font-semibold transition-all hover:border-[var(--accent)]">Almoço/Jantar</button>
-                <button onclick="filterContent('snack', this)" class="filter-btn px-6 py-2 rounded-full border border-gray-200 text-sm font-semibold transition-all hover:border-[var(--accent)]">Lanches/Doces</button>
+                <button onclick="filterContent('all', this)" class="filter-btn filter-active px-5 py-2 rounded-full border border-gray-200 text-sm font-semibold">Todas</button>
+                <button onclick="filterContent('lunch', this)" class="filter-btn px-5 py-2 rounded-full border border-gray-200 text-sm font-semibold">Almoço/Jantar</button>
+                <button onclick="filterContent('snack', this)" class="filter-btn px-5 py-2 rounded-full border border-gray-200 text-sm font-semibold">Lanches/Doces</button>
             </div>
 
             <div id="recipe-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
@@ -66,9 +80,9 @@
         </div>
     </section>
 
-    <div id="modal" class="hidden fixed inset-0 bg-black/80 z-[100] flex items-center justify-center p-4 backdrop-blur-sm transition-opacity" onclick="if(event.target === this) closeModal()">
-        <div class="bg-white rounded-[2.5rem] max-w-lg w-full max-h-[90vh] overflow-y-auto p-8 relative shadow-2xl">
-            <button onclick="closeModal()" class="absolute top-6 right-6 text-gray-400 hover:text-black transition-colors text-2xl">✕</button>
+    <div id="modal" class="hidden fixed inset-0 bg-black/70 z-[100] flex items-center justify-center p-4 backdrop-blur-sm">
+        <div class="bg-white rounded-3xl max-w-lg w-full max-h-[85vh] overflow-y-auto p-8 relative">
+            <button onclick="closeModal()" class="absolute top-5 right-5 text-2xl">✕</button>
             <div id="modal-content"></div>
         </div>
     </div>
@@ -80,13 +94,13 @@
             { id: 3, cat: 'lunch', name: "Frango ao Caril Low Carb", emoji: "🥘", prot: "35g", cal: "310", carbs: "7g", tip: "Substitua o arroz por couve-flor picada." },
             { id: 4, cat: 'snack', name: "Mousse de Proteína e Cacau", emoji: "🍫", prot: "25g", cal: "180", carbs: "5g", tip: "Use whey de baunilha ou chocolate 70%." },
             { id: 5, cat: 'lunch', name: "Esparguete de Curgete com Bolonhesa", emoji: "🍝", prot: "32g", cal: "290", carbs: "9g", tip: "Corte a curgete em tiras finas para simular massa." },
-            { id: 6, cat: 'snack', name: "Pão de Queijo Fit (3 Ingredientes)", emoji: "🥯", prot: "12g", cal: "140", carbs: "10g", tip: "Feito com ovo, queijo e um pouco de tapioca." },
+            { id: 6, cat: 'snack', name: "Pão de Queijo Fit", emoji: "🥯", prot: "12g", cal: "140", carbs: "10g", tip: "Feito com ovo, queijo e um pouco de tapioca." },
             { id: 7, cat: 'lunch', name: "Omelete Premium de Espinafres", emoji: "🍳", prot: "22g", cal: "210", carbs: "3g", tip: "Excelente para o café da manhã ou jantar leve." },
             { id: 8, cat: 'lunch', name: "Bowl de Atum e Abacate", emoji: "🥣", prot: "30g", cal: "340", carbs: "6g", tip: "Gorduras boas que estabilizam a insulina." },
-            { id: 9, cat: 'snack', name: "Batido Energético de Frutos Vermelhos", emoji: "🥤", prot: "20g", cal: "160", carbs: "12g", tip: "Baixo índice glicêmico para evitar picos." },
-            { id: 10, cat: 'lunch', name: "Lombinho de Porco com Alecrim", emoji: "🍖", prot: "36g", cal: "320", carbs: "0g", tip: "Proteína magra de alta biodisponibilidade." },
+            { id: 9, cat: 'snack', name: "Batido de Frutos Vermelhos", emoji: "🥤", prot: "20g", cal: "160", carbs: "12g", tip: "Baixo índice glicêmico para evitar picos." },
+            { id: 10, cat: 'lunch', name: "Lombinho com Alecrim", emoji: "🍖", prot: "36g", cal: "320", carbs: "0g", tip: "Proteína magra de alta biodisponibilidade." },
             { id: 11, cat: 'snack', name: "Cookies de Aveia e Proteína", emoji: "🍪", prot: "15g", cal: "190", carbs: "14g", tip: "Perfeito para levar na bolsa e evitar furos na dieta." },
-            { id: 12, cat: 'lunch', name: "Quiche Sem Massa de Alho Francês", emoji: "🥧", prot: "18g", cal: "230", carbs: "7g", tip: "O alho francês ajuda na digestão lenta." },
+            { id: 12, cat: 'lunch', name: "Quiche Sem Massa", emoji: "🥧", prot: "18g", cal: "230", carbs: "7g", tip: "O alho francês ajuda na digestão lenta." },
             { id: 13, cat: 'snack', name: "Iogurte Grego com Amêndoas", emoji: "🍦", prot: "16g", cal: "200", carbs: "8g", tip: "Combine crocância com cremosidade." },
             { id: 14, cat: 'lunch', name: "Tiras de Vitela com Pimentos", emoji: "🔔", prot: "34g", cal: "300", carbs: "5g", tip: "Pimentos ricos em vitamina C para colágeno." },
             { id: 15, cat: 'snack', name: "Gelatina de Proteína", emoji: "🍮", prot: "20g", cal: "90", carbs: "0g", tip: "Opção zero carbo para ceia." }
@@ -94,13 +108,14 @@
 
         function render(data) {
             const grid = document.getElementById('recipe-grid');
+            if(!grid) return;
             grid.innerHTML = data.map(r => `
-                <div class="recipe-card bg-white p-8 rounded-[2.5rem] shadow-sm flex flex-col items-center text-center" onclick="openModal(${r.id})">
-                    <div class="text-6xl mb-4 transform transition-transform hover:scale-110">${r.emoji}</div>
+                <div class="recipe-card bg-white p-8 rounded-[2.5rem] border border-gray-100 shadow-sm" onclick="openModal(${r.id})">
+                    <div class="text-6xl mb-4">${r.emoji}</div>
                     <h4 class="text-xl font-bold text-[var(--primary)] mb-2">${r.name}</h4>
-                    <div class="flex justify-center gap-2 mt-4">
-                        <span class="bg-green-50 text-green-700 text-[10px] font-bold px-3 py-1 rounded-full uppercase border border-green-100">${r.prot} Proteína</span>
-                        <span class="bg-gray-50 text-gray-600 text-[10px] font-bold px-3 py-1 rounded-full uppercase border border-gray-100">${r.cal} Kcal</span>
+                    <div class="flex justify-center gap-3 mt-4">
+                        <span class="bg-green-100 text-green-700 text-[10px] font-bold px-3 py-1 rounded-full uppercase">${r.prot} Proteína</span>
+                        <span class="bg-gray-100 text-gray-600 text-[10px] font-bold px-3 py-1 rounded-full uppercase">${r.cal} Kcal</span>
                     </div>
                 </div>
             `).join('');
@@ -115,43 +130,26 @@
 
         function openModal(id) {
             const r = recipes.find(x => x.id === id);
-            document.body.classList.add('no-scroll');
             document.getElementById('modal-content').innerHTML = `
-                <div class="text-7xl text-center mb-6">${r.emoji}</div>
+                <div class="text-6xl text-center mb-4">${r.emoji}</div>
                 <h3 class="text-3xl font-bold text-[var(--primary)] text-center mb-6 leading-tight">${r.name}</h3>
                 <div class="grid grid-cols-3 gap-4 mb-8 text-center">
-                    <div class="bg-gray-50 p-4 rounded-2xl border border-gray-100">
-                        <p class="text-[10px] text-gray-400 font-bold uppercase mb-1">Carbs</p>
-                        <p class="font-bold text-gray-700">${r.carbs}</p>
-                    </div>
-                    <div class="bg-green-50 p-4 rounded-2xl border border-green-100">
-                        <p class="text-[10px] text-green-500 font-bold uppercase mb-1">Prot</p>
-                        <p class="font-bold text-green-700">${r.prot}</p>
-                    </div>
-                    <div class="bg-orange-50 p-4 rounded-2xl border border-orange-100">
-                        <p class="text-[10px] text-orange-400 font-bold uppercase mb-1">Kcal</p>
-                        <p class="font-bold text-orange-700">${r.cal}</p>
-                    </div>
+                    <div class="bg-gray-50 p-3 rounded-2xl"><p class="text-[10px] text-gray-400 font-bold mb-1">CARBS</p><p class="font-bold">${r.carbs}</p></div>
+                    <div class="bg-green-50 p-3 rounded-2xl text-green-700"><p class="text-[10px] text-green-400 font-bold mb-1">PROT</p><p class="font-bold">${r.prot}</p></div>
+                    <div class="bg-gray-50 p-3 rounded-2xl"><p class="text-[10px] text-gray-400 font-bold mb-1">KCAL</p><p class="font-bold">${r.cal}</p></div>
                 </div>
-                <div class="bg-yellow-50 p-6 rounded-[1.5rem] border border-yellow-100 mb-8">
-                    <p class="font-bold text-yellow-800 mb-2 flex items-center gap-2">
-                        <span>💡</span> Dica da Chef Amellié:
-                    </p>
-                    <p class="text-yellow-700 italic text-sm leading-relaxed">"${r.tip}"</p>
+                <div class="bg-yellow-50 p-6 rounded-2xl border border-yellow-100 mb-6">
+                    <p class="font-bold text-yellow-800 mb-1">Dica da Chef Amellié:</p>
+                    <p class="text-yellow-700 italic text-sm">"${r.tip}"</p>
                 </div>
-                <a href="https://pay.kirvano.com/22ef5fd4-6ee2-4df6-9371-710c50758e73" target="_blank" class="btn-gold block text-center py-4 rounded-2xl font-bold text-white text-lg transition-transform hover:scale-[1.02]">Garantir Guia Completo</a>
+                <a href="https://pay.kirvano.com/22ef5fd4-6ee2-4df6-9371-710c50758e73" target="_blank" class="btn-gold block text-center py-4 rounded-2xl font-bold text-white shadow-lg">Adquirir Receita Completa</a>
             `;
             document.getElementById('modal').classList.remove('hidden');
         }
 
-        function closeModal() {
-            document.getElementById('modal').classList.add('hidden');
-            document.body.classList.remove('no-scroll');
-        }
+        function closeModal() { document.getElementById('modal').classList.add('hidden'); }
 
-        // Inicializar
         render(recipes);
     </script>
-
 </body>
 </html>
