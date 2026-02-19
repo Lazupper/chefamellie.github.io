@@ -1,747 +1,165 @@
 <!DOCTYPE html>
 <html lang="pt-PT">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chef Amellié Bittencourt - 15 Receitas Protocolo Mounjaro</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chef Amellié Bittencourt - 15 Receitas Protocolo Mounjaro</title>
 
-    <!-- Facebook Pixel -->
-    <script>
-    !function(f,b,e,v,n,t,s){
-        if(f.fbq)return;
-        n=f.fbq=function(){
-            n.callMethod?
-            n.callMethod.apply(n,arguments):n.queue.push(arguments)
-        };
-        if(!f._fbq)f._fbq=n;
-        n.push=n;
-        n.loaded=!0;
-        n.version='2.0';
-        n.queue=[];
-        t=b.createElement(e);
-        t.async=!0;
-        t.src=v;
-        s=b.getElementsByTagName(e)[0];
-        s.parentNode.insertBefore(t,s)
-    }(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
+<!-- Facebook Pixel -->
+<script>
+!function(f,b,e,v,n,t,s){
+if(f.fbq)return;
+n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;
+n.push=n;
+n.loaded=!0;
+n.version='2.0';
+n.queue=[];
+t=b.createElement(e);
+t.async=!0;
+t.src=v;
+s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)
+}(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
 
-    fbq('init', '2483137995435500');
-    fbq('track', 'PageView');
-    setTimeout(function() { fbq('track', 'ViewContent'); }, 15000);
-    </script>
+fbq('init', '2483137995435500');
+fbq('track', 'PageView');
+setTimeout(function(){ fbq('track', 'ViewContent'); },15000);
+</script>
 
-    <noscript>
-        <img height="1" width="1" style="display:none"
-        src="https://www.facebook.com/tr?id=2483137995435500&ev=PageView&noscript=1"/>
-    </noscript>
+<noscript>
+<img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=2483137995435500&ev=PageView&noscript=1"/>
+</noscript>
 
-    <!-- Tailwind -->
-    <script src="https://cdn.tailwindcss.com" defer></script>
+<script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
-    <style>
-        :root { --primary: #6b2d3d; --accent: #c17a7a; }
-        body { font-family: 'Inter', sans-serif; background-color: #fcfbf9; color: #333; }
-        h1, h2, h3 { font-family: 'Playfair Display', serif; }
+<style>
+:root{--primary:#6b2d3d;--accent:#c17a7a;}
+body{font-family:'Inter',sans-serif;background:#fcfbf9;color:#333;}
+h1,h2,h3{font-family:'Playfair Display',serif;}
 
-        .recipe-card { 
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
-            cursor: pointer;
-        }
-        .recipe-card:hover { 
-            transform: translateY(-15px) scale(1.02); 
-            box-shadow: 0 25px 50px -12px rgba(107, 45, 61, 0.15);
-            border-color: var(--accent);
-        }
+.recipe-card{
+transition:all .4s cubic-bezier(.175,.885,.32,1.275);
+cursor:pointer;
+}
+.recipe-card:hover{
+transform:translateY(-15px) scale(1.02);
+box-shadow:0 25px 50px -12px rgba(107,45,61,.15);
+border-color:var(--accent);
+}
 
-        .btn-gold { 
-            background: linear-gradient(135deg, #d4a373 0%, #b58253 100%);
-            animation: pulse-button 2s infinite;
-        }
+.btn-gold{
+background:linear-gradient(135deg,#d4a373 0%,#b58253 100%);
+animation:pulse-button 2s infinite;
+}
 
-        @keyframes pulse-button {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-            100% { transform: scale(1); }
-        }
+@keyframes pulse-button{
+0%{transform:scale(1);}
+50%{transform:scale(1.05);}
+100%{transform:scale(1);}
+}
 
-        .filter-active { 
-            background: var(--primary) !important; 
-            color: white !important; 
-        }
-    </style>
+.filter-active{
+background:var(--primary)!important;
+color:#fff!important;
+}
+</style>
 </head>
+
 <body>
- <body class="flex flex-col min-h-full">
-  <header class="bg-white/90 backdrop-blur-lg sticky top-0 z-50 border-b border-gray-100 shadow-sm">
-   <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-    <div class="flex items-center gap-3">
-     <div class="w-12 h-12 rounded-full bg-[var(--primary)] flex items-center justify-center text-white text-xl font-bold border-2 border-[var(--accent)]">
-      AB
-     </div>
-     <div>
-      <h1 class="text-xl font-bold text-[var(--primary)] leading-tight">Chef Amélie</h1>
-      <p class="text-[10px] tracking-[0.2em] uppercase text-[var(--accent)] font-semibold">Bittencourt</p>
-     </div>
-    </div>
-    <nav class="hidden md:flex gap-8 text-sm font-medium text-gray-600"><a href="#sobre" class="hover:text-[var(--primary)] transition">Sobre</a> <a href="#receitas" class="hover:text-[var(--primary)] transition">Receitas</a> <a href="https://www.instagram.com/chefamelliebitt?igsh=aDdmMTAzaWJyd2Rw" target="_blank" rel="noopener noreferrer" class="hover:text-[var(--primary)] transition flex items-center gap-2">
-      <svg class="w-5 h-5" viewbox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.266.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zM5.838 12a6.162 6.162 0 1 1 12.324 0 6.162 6.162 0 0 1-12.324 0zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm4.965-10.322a1.44 1.44 0 1 1 2.881.001 1.44 1.44 0 0 1-2.881-.001z" />
-      </svg> Instagram </a>
-    </nav> <a href="https://pay.kirvano.com/22ef5fd4-6ee2-4df6-9371-710c50758e73"
-   target="_blank"
-   rel="noopener noreferrer"
-   class="btn-gold px-6 py-2 rounded-xl font-bold shadow-md">
-   Comprar agora
+
+<header class="bg-white sticky top-0 z-50 border-b py-4">
+<div class="container mx-auto px-6 flex justify-between items-center">
+<div class="flex items-center gap-2">
+<div class="w-10 h-10 bg-[var(--primary)] rounded-full flex items-center justify-center text-white font-bold">AB</div>
+<span class="text-xl font-bold text-[var(--primary)]">Chef Amellié</span>
+</div>
+
+<a href="https://pay.kirvano.com/22ef5fd4-6ee2-4df6-9371-710c50758e73"
+target="_blank"
+class="btn-gold px-6 py-2 rounded-full font-bold text-white shadow-lg text-sm">
+Comprar Agora
 </a>
+</div>
+</header>
 
-   </div>
-  </header>
-  <main class="flex-grow">
-   <section class="relative bg-[var(--primary)] py-20 overflow-hidden">
-    <div class="container mx-auto px-6 relative z-10">
-     <div class="grid md:grid-cols-2 gap-12 items-center">
-      <div class="text-white space-y-6 fade-in order-2 md:order-1"><span class="inline-flex items-center gap-2 px-4 py-2 bg-white/10 rounded-full text-xs font-bold tracking-widest uppercase border border-white/20 backdrop-blur-sm"> <span class="w-2 h-2 bg-[var(--accent)] rounded-full animate-pulse"></span>Protocolo Mounjaro &amp; Low Carb </span>
-       <h2 class="text-4xl md:text-6xl font-bold leading-tight">Saúde no prato,<br>
-        resultados no corpo.</h2>
-       <p class="text-lg text-gray-200 font-light max-w-xl leading-relaxed">O método exclusivo para maximizar o seu tratamento, mantendo a saciedade e preservando a massa muscular.</p>
-       <div class="flex gap-4 pt-4"><a href="#receitas" class="bg-white text-[var(--primary)] px-8 py-3 rounded-xl font-bold hover:bg-gray-100 transition shadow-xl">Ver Receitas</a>
-       </div>
-      </div>
-      <div class="flex justify-center order-1 md:order-2">
-       <div class="relative w-80 h-80 md:w-96 md:h-96">
-        <div class="absolute inset-0 bg-gradient-to-br from-[var(--accent)] to-white/10 rounded-full blur-2xl opacity-50"></div><img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Prato Saudável" class="relative w-full h-full object-cover rounded-full border-8 border-white/10 shadow-2xl" loading="lazy">
-       </div>
-      </div>
-     </div>
-    </div>
-   </section>
-   <section id="sobre" class="py-20 bg-white">
-    <div class="container mx-auto px-6">
-     <div class="grid md:grid-cols-2 gap-16 items-center">
-      <div class="relative flex justify-center">
-       <div class="relative w-72 h-96">
-        <div class="absolute top-4 left-4 w-full h-full border-2 border-[var(--accent)] rounded-3xl"></div><img src="https://i.imgur.com/ZyPQVhk.jpg">
- alt="Chef Amellie" class="relative z-10 w-full h-full object-cover rounded-3xl shadow-xl" loading="lazy" onerror="console.error('Image failed:', this.src); this.style.background='#f3e5db'; this.alt='Chef Amellie';">
-       </div>
-      </div>
-      <div class="space-y-6">
-       <div><span class="text-[var(--accent)] text-sm font-bold uppercase tracking-widest">Sobre a Chef</span>
-        <h3 class="text-4xl font-bold text-[var(--primary)] mt-2">Amellié Bittencourt</h3>
-       </div>
-       <p class="text-gray-600 leading-relaxed">Especialista em nutrição funcional e culinária low carb, dedico-me a criar receitas que transformam vidas. O meu método foca em alta proteína e baixo índice glicémico.</p>
-       <div class="bg-blue-50 p-4 rounded-xl border border-blue-200">
-        <h4 class="font-bold text-blue-900 mb-2">Protocolo Mounjaro</h4>
-        <p class="text-sm text-blue-800 leading-relaxed">Todas as receitas foram desenvolvidas especificamente para potencializar os resultados do protocolo Mounjaro, mantendo o equilíbrio nutricional ideal com alta proteína, baixos carboidratos e máxima saciedade.</p>
-       </div>
-       <div class="flex flex-wrap gap-3 pt-4"><span class="px-4 py-2 bg-[var(--primary)]/10 text-[var(--primary)] rounded-full text-sm font-medium">🎓 Nutricionista</span> <span class="px-4 py-2 bg-green-100 text-green-700 rounded-full text-sm font-medium">      Low Carb Expert</span>
-       </div>
-      </div>
-     </div>
-    </div>
-   </section>
-   <section id="receitas" class="py-20 bg-gray-50">
-    <div class="container mx-auto px-6">
-     <div class="text-center mb-12"><span class="text-[var(--accent)] text-sm font-bold uppercase tracking-widest">O Menu</span>
-      <h3 class="text-4xl font-bold text-[var(--primary)] mt-2">15 Receitas Exclusivas</h3>
-     </div>
-     <div class="flex flex-wrap gap-3 justify-center mb-12"><button class="recipe-filter active px-6 py-2 rounded-full border-2 border-[var(--primary)] font-bold transition" onclick="filterRecipes('all', this)">Todas</button> <button class="recipe-filter px-6 py-2 rounded-full border-2 border-gray-300 text-gray-600 font-bold hover:border-[var(--primary)] transition" onclick="filterRecipes('breakfast', this)">CAFE</button> <button class="recipe-filter px-6 py-2 rounded-full border-2 border-gray-300 text-gray-600 font-bold hover:border-[var(--primary)] transition" onclick="filterRecipes('lunch', this)">ALMOCO</button> <button class="recipe-filter px-6 py-2 rounded-full border-2 border-gray-300 text-gray-600 font-bold hover:border-[var(--primary)] transition" onclick="filterRecipes('dinner', this)">JANTAR</button> <button class="recipe-filter px-6 py-2 rounded-full border-2 border-gray-300 text-gray-600 font-bold hover:border-[var(--primary)] transition" onclick="filterRecipes('snack', this)">LANCHE</button>
-     </div>
-     <div id="recipes-grid" class="grid md:grid-cols-3 gap-8"></div>
-    </div>
-   </section>
-   <section id="favoritas" class="py-20 bg-white">
-    <div class="container mx-auto px-6">
-     <div class="text-center mb-12"><span class="text-[var(--accent)] text-sm font-bold uppercase tracking-widest">Guardadas</span>
-      <h3 class="text-4xl font-bold text-[var(--primary)] mt-2">Minhas Receitas Favoritas</h3>
-     </div>
-     <div id="favorites-grid" class="grid md:grid-cols-3 gap-8"></div>
-     <div id="no-favorites" class="text-center py-12">
-      <p class="text-gray-500 text-lg">Nenhuma receita favorita ainda. Clica no    ️ para guardar!</p>
-     </div>
-    </div>
-   </section>
-   <section class="py-20 bg-gradient-to-br from-gray-50 to-white">
-    <div class="container mx-auto px-6">
-     <div class="text-center mb-16"><span class="text-[var(--accent)] text-sm font-bold uppercase tracking-widest">Por Que Funcionam Juntas</span>
-      <h3 class="text-4xl font-bold text-[var(--primary)] mt-2 mb-6">Receitas + Mounjaro = Resultados Reais</h3>
-      <p class="text-gray-600 max-w-2xl mx-auto">Descubra como o protocolo Mounjaro e a nutrição low carb se complementam perfeitamente para transformar seu corpo</p>
-     </div>
-     <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-      <div class="bg-white p-6 rounded-2xl shadow-sm border border-blue-100 hover:shadow-lg transition group">
-       <div class="text-4xl mb-3">
-        🎯
-       </div>
-       <h4 class="font-bold text-[var(--primary)] mb-2">Redução de Apetite</h4>
-       <p class="text-sm text-gray-600 mb-3">O Mounjaro já reduz naturalmente o apetite. As nossas receitas mantêm esse efeito com refeições satisfatórias e balanceadas.</p>
-       <div class="text-xs text-blue-600 space-y-1">
-        <p>✓ Refeições mais satisfatórias</p>
-        <p>✓ Proteína potencia saciedade</p>
-        <p>✓ Sem sensação de privação</p>
-       </div>
-      </div>
-      <div class="bg-white p-6 rounded-2xl shadow-sm border border-green-100 hover:shadow-lg transition group">
-       <div class="text-4xl mb-3">
-        💪
-       </div>
-       <h4 class="font-bold text-[var(--primary)] mb-2">Preservação Muscular</h4>
-       <p class="text-sm text-gray-600 mb-3">Alta proteína em cada receita garante que você perde gordura, não músculo. Essencial durante o tratamento.</p>
-       <div class="text-xs text-green-600 space-y-1">
-        <p>✓ 30-45g proteína/refeição</p>
-        <p>✓ Mantém metabolismo ativo</p>
-        <p>✓ Recuperação melhorada</p>
-       </div>
-      </div>
-      <div class="bg-white p-6 rounded-2xl shadow-sm border border-yellow-100 hover:shadow-lg transition group">
-       <div class="text-4xl mb-3">
-        ⚡
-       </div>
-       <h4 class="font-bold text-[var(--primary)] mb-2">Controlo Glicémico</h4>
-       <p class="text-sm text-gray-600 mb-3">Baixo índice glicémico potencializa os efeitos do Mounjaro, estabilizando os níveis de açúcar no sangue.</p>
-       <div class="text-xs text-yellow-700 space-y-1">
-        <p>✓ Menos picos de insulina</p>
-        <p>✓ Menos desejos por açúcar</p>
-        <p>✓ Energia mais estável</p>
-       </div>
-      </div>
-      <div class="bg-white p-6 rounded-2xl shadow-sm border border-orange-100 hover:shadow-lg transition group">
-       <div class="text-4xl mb-3">
-        ✨
-       </div>
-       <h4 class="font-bold text-[var(--primary)] mb-2">Energia Constante</h4>
-       <p class="text-sm text-gray-600 mb-3">Refeições bem equilibradas mantêm seus níveis de energia elevados durante todo o dia, sem quedas.</p>
-       <div class="text-xs text-orange-700 space-y-1">
-        <p>✓ Sem cansaço pós-refeição</p>
-        <p>✓ Mais disposição no exercício</p>
-        <p>✓ Foco mental melhorado</p>
-       </div>
-      </div>
-     </div>
-     <div class="grid md:grid-cols-2 gap-6 mb-12">
-      <div class="bg-gradient-to-br from-purple-50 to-pink-50 p-6 rounded-2xl shadow-sm border border-purple-100 hover:shadow-lg transition">
-       <h4 class="font-bold text-[var(--primary)] mb-2">Ciência Comprovada</h4>
-       <ul class="space-y-2 text-sm text-gray-700">
-        <li class="flex items-start gap-2"><span class="text-purple-600 font-bold">→</span> <span>Estudos mostram que proteína alta aumenta a termogênese (queima de calorias)</span></li>
-        <li class="flex items-start gap-2"><span class="text-purple-600 font-bold">→</span> <span>Low carb reduz triglicéridos e melhora perfil lipídico</span></li>
-        <li class="flex items-start gap-2"><span class="text-purple-600 font-bold">→</span> <span>Combinação Mounjaro + nutrição otimizada triplica resultados</span></li>
-       </ul>
-      </div>
-      <div class="bg-gradient-to-br from-green-50 to-emerald-50 p-6 rounded-2xl shadow-sm border border-green-100 hover:shadow-lg transition">
-       <div class="text-4xl mb-3">
-        📈
-       </div>
-       <h4 class="font-bold text-[var(--primary)] mb-2">Resultados Mensuráveis</h4>
-       <ul class="space-y-2 text-sm text-gray-700">
-        <li class="flex items-start gap-2"><span class="text-green-600 font-bold">→</span> <span><strong>4 semanas:</strong> Redução de medidas visível</span></li>
-        <li class="flex items-start gap-2"><span class="text-green-600 font-bold">→</span> <span><strong>8 semanas:</strong> Transformação corporal notável</span></li>
-        <li class="flex items-start gap-2"><span class="text-green-600 font-bold">→</span> <span><strong>12 semanas:</strong> Resultados extraordinários confirmados</span></li>
-       </ul>
-      </div>
-     </div>
-     <div class="bg-gradient-to-r from-[var(--primary)] to-[var(--accent)] rounded-3xl p-8 md:p-12 text-white mb-16">
-      <div class="grid md:grid-cols-2 gap-8 items-center">
-       <div>
-        <h4 class="text-2xl font-bold mb-4">O Método Exclusivo</h4>
-        <ul class="space-y-3 text-sm md:text-base">
-         <li class="flex items-start gap-3"><span class="text-xl">📖</span> <span><strong>15 receitas estratégicas</strong> - cada uma desenvolvida para potencializar o Mounjaro</span></li>
-         <li class="flex items-start gap-3"><span class="text-xl">✓</span> <span><strong>Nutrientes balanceados</strong> - proteína, gordura boa e carboidratos mínimos</span></li>
-         <li class="flex items-start gap-3"><span class="text-xl">✓</span> <span><strong>Modo de preparo passo a passo</strong> - super fácil de seguir em casa</span></li>
-         <li class="flex items-start gap-3"><span class="text-xl">✓</span> <span><strong>Dicas exclusivas da Chef</strong> - segredos para maximizar resultados</span></li>
-        </ul>
-       </div>
-       <div class="bg-white/10 p-6 rounded-2xl backdrop-blur-sm border border-white/20">
-        <h5 class="font-bold text-lg mb-4">Exemplo de Combinação Perfeita</h5>
-        <div class="space-y-3 text-sm">
-         <div class="flex justify-between items-center"><span>Bife à Portuguesa com Cogumelos</span> <span class="bg-white/20 px-3 py-1 rounded-full text-xs font-bold">380 kcal</span>
-         </div>
-         <div class="w-full bg-white/20 rounded-full h-2">
-          <div class="bg-white h-2 rounded-full" style="width: 42%"></div>
-         </div>
-         <div class="flex justify-between text-xs opacity-80"><span>Proteína: 42g</span> <span>Carbs: 8g</span>
-         </div>
-        </div>
-       </div>
-      </div>
-     </div>
-     <div class="text-center bg-white rounded-3xl p-8 md:p-12 shadow-xl border-2 border-[var(--accent)]">
-      <h3 class="text-3xl font-bold text-[var(--primary)] mb-4">Compre o eBook Completo</h3>
-      <p class="text-gray-600 mb-4 text-lg">Acesso completo a 500+ receitas low carb, plano nutricional e guia Mounjaro completo!</p>
-      <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-6">
-       <div class="text-center">
-        <p class="text-sm text-gray-500 mb-1">Preço anterior</p>
-        <p class="text-xl line-through text-gray-400">R$ 49,90</p>
-       </div>
-       <div class="text-3xl font-bold text-[var(--accent)]">
-        AGORA
-       </div>
-       <div class="text-center">
-        <p class="text-sm text-gray-500 mb-1">Apenas</p>
-        <p class="text-3xl font-bold text-[var(--primary)]">R$ 29,90</p>
-       </div>
-      </div>
-      <p class="text-sm text-green-600 font-bold mb-6">✓ Acesso imediato após compra | ✓ Garantia 7 dias | ✓ Sem taxas ocultas</p> <a href="https://pay.kirvano.com/22ef5fd4-6ee2-4df6-9371-710c50758e73"
-   target="_blank"
-   rel="noopener noreferrer"
-   class="btn-gold px-6 py-2 rounded-xl font-bold shadow-md">
-   Comprar agora
+<section class="py-16 bg-white">
+<div class="container mx-auto px-6 text-center">
+
+<h2 class="text-4xl font-bold text-[var(--primary)]">
+As 15 Receitas Estratégicas
+</h2>
+
+<p class="text-gray-500 mt-4 max-w-xl mx-auto">
+Clique nos pratos para ver detalhes.
+</p>
+
+<div id="recipe-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-12"></div>
+
+</div>
+</section>
+
+<div id="modal" class="hidden fixed inset-0 bg-black/70 z-[100] flex items-center justify-center p-4">
+<div class="bg-white rounded-3xl max-w-lg w-full max-h-[85vh] overflow-y-auto p-8 relative">
+<button onclick="closeModal()" class="absolute top-5 right-5 text-2xl">✕</button>
+<div id="modal-content"></div>
+</div>
+</div>
+
+<script>
+const recipes=[
+{id:1,name:"Bife à Portuguesa",emoji:"🥩",prot:"42g",cal:"380",carbs:"8g",tip:"Use alcatra ou filé mignon."},
+{id:2,name:"Salmão com Crosta",emoji:"🐟",prot:"38g",cal:"350",carbs:"4g",tip:"Rico em ômega 3."},
+{id:3,name:"Frango Low Carb",emoji:"🥘",prot:"35g",cal:"310",carbs:"7g",tip:"Troque arroz por couve-flor."},
+{id:4,name:"Mousse Proteico",emoji:"🍫",prot:"25g",cal:"180",carbs:"5g",tip:"Use whey de chocolate."},
+{id:5,name:"Omelete Premium",emoji:"🍳",prot:"22g",cal:"210",carbs:"3g",tip:"Ideal para jantar leve."}
+];
+
+function render(){
+const grid=document.getElementById("recipe-grid");
+grid.innerHTML=recipes.map(r=>`
+<div class="recipe-card bg-white p-8 rounded-3xl border shadow-sm" onclick="openModal(${r.id})">
+<div class="text-6xl mb-4">${r.emoji}</div>
+<h4 class="text-xl font-bold text-[var(--primary)]">${r.name}</h4>
+<div class="flex justify-center gap-3 mt-4">
+<span class="bg-green-100 text-green-700 text-xs font-bold px-3 py-1 rounded-full">${r.prot}</span>
+<span class="bg-gray-100 text-gray-600 text-xs font-bold px-3 py-1 rounded-full">${r.cal} kcal</span>
+</div>
+</div>
+`).join("");
+}
+
+function openModal(id){
+const r=recipes.find(x=>x.id===id);
+document.getElementById("modal-content").innerHTML=`
+<div class="text-6xl text-center mb-4">${r.emoji}</div>
+<h3 class="text-3xl font-bold text-[var(--primary)] text-center mb-6">${r.name}</h3>
+<p class="text-center mb-4"><strong>Carbs:</strong> ${r.carbs}</p>
+<p class="text-center mb-4"><strong>Proteína:</strong> ${r.prot}</p>
+<p class="text-center mb-4"><strong>Kcal:</strong> ${r.cal}</p>
+<p class="italic text-center text-gray-600 mb-6">"${r.tip}"</p>
+<a href="https://pay.kirvano.com/22ef5fd4-6ee2-4df6-9371-710c50758e73"
+target="_blank"
+class="btn-gold block text-center py-4 rounded-2xl font-bold text-white">
+Adquirir Receita Completa
 </a>
+`;
+document.getElementById("modal").classList.remove("hidden");
+}
 
-     </div>
-    </div>
-   </section>
-   <section class="py-20 bg-[var(--primary)]">
-    <div class="container mx-auto px-6">
-     <div class="text-center mb-12">
-      <h3 class="text-3xl md:text-4xl font-bold text-white mb-4">O Que Dizem os Clientes</h3>
-      <p class="text-white/80">Histórias reais de pessoas que transformaram suas vidas com as receitas da Chef Amellié</p>
-     </div>
-     <div id="testimonials-grid" class="grid md:grid-cols-3 gap-6 mb-12"><!-- Testimonials will be loaded here -->
-     </div>
-     <div class="text-center mt-12">
-      <p class="text-white/80 mb-6 text-lg">Quer compartilhar sua história e deixar uma avaliação?</p><button onclick="openFeedbackForm()" class="btn-gold px-8 py-3 rounded-xl font-bold shadow-lg hover:shadow-xl inline-flex items-center gap-2"> Deixar Meu Depoimento </button>
-     </div>
-    </div>
-   </section>
-   <section class="py-20 bg-white">
-    <div class="container mx-auto px-6">
-     <div class="bg-[var(--primary)] rounded-3xl p-8 md:p-12 text-center text-white shadow-2xl">
-      <h3 class="text-3xl font-bold mb-4">Tem dúvidas ou precisa de ajuda?</h3>
-      <p class="mb-8 opacity-90">Fale diretamente com a Chef Amellié para orientação personalizada sobre o protocolo Mounjaro.</p>
-      <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-       <div class="btn-gold bg-white text-[var(--primary)] px-6 py-3 rounded-xl font-bold shadow-lg inline-flex items-center justify-center gap-2 whitespace-nowrap"><span>chefsmelliebitt@gmail.com</span>
-       </div><a href="https://www.instagram.com/chefamelliebitt?igsh=aDdmMTAzaWJyd2Rw" target="_blank" rel="noopener noreferrer" class="btn-gold bg-white text-[var(--primary)] px-6 py-3 rounded-xl font-bold shadow-lg hover:shadow-xl inline-flex items-center justify-center gap-2">
-        <svg class="w-5 h-5" viewbox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.266.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zM5.838 12a6.162 6.162 0 1 1 12.324 0 6.162 6.162 0 0 1-12.324 0zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm4.965-10.322a1.44 1.44 0 1 1 2.881.001 1.44 1.44 0 0 1-2.881-.001z" />
-        </svg><span>@amelliebittencourt</span> </a>
-      </div>
-     </div>
-    </div>
-   </section>
-  </main>
-  <div id="recipe-modal" class="hidden fixed inset-0 bg-black/60 z-50 flex items-center justify-center p-4 backdrop-blur-sm overflow-y-auto">
-   <div class="bg-white rounded-2xl max-w-2xl w-full shadow-2xl my-8">
-    <div class="flex justify-between items-start p-8 border-b border-gray-100">
-     <div>
-      <h3 id="modal-name" class="text-3xl font-bold text-[var(--primary)]"></h3><span id="modal-tag" class="text-2xl mt-2"></span>
-     </div>
-     <div class="flex gap-2"><button id="fav-btn" onclick="toggleFavorite()" class="text-2xl hover:scale-110 transition">🤍</button> <button onclick="closeRecipeModal()" class="text-xl font-bold hover:text-gray-500">✕</button>
-     </div>
-    </div>
-    <div class="p-8 space-y-6 max-h-[calc(90vh-100px)] overflow-y-auto">
-     <div class="grid grid-cols-4 gap-3 bg-gray-50 p-4 rounded-xl border border-gray-100">
-      <div class="text-center">
-       <p class="text-gray-400 text-xs uppercase">Tempo</p>
-       <p id="modal-time" class="text-lg font-bold text-gray-700"></p>
-      </div>
-      <div class="text-center">
-       <p class="text-gray-400 text-xs uppercase">Kcal</p>
-       <p id="modal-cal" class="text-lg font-bold text-gray-700"></p>
-      </div>
-      <div class="text-center">
-       <p class="text-gray-400 text-xs uppercase">Proteína</p>
-       <p id="modal-prot" class="text-lg font-bold text-green-600"></p>
-      </div>
-      <div class="text-center">
-       <p class="text-gray-400 text-xs uppercase">Carbs</p>
-       <p id="modal-carbs" class="text-lg font-bold text-orange-600"></p>
-      </div>
-     </div>
-     <div class="grid grid-cols-2 gap-3 bg-blue-50 p-4 rounded-xl border border-blue-100">
-      <div class="text-center">
-       <p class="text-blue-600 text-xs uppercase font-bold">Gordura</p>
-       <p id="modal-fat" class="text-lg font-bold text-blue-700"></p>
-      </div>
-      <div class="text-center">
-       <p class="text-blue-600 text-xs uppercase font-bold">Pessoas</p>
-       <p id="modal-servings" class="text-lg font-bold text-blue-700"></p>
-      </div>
-     </div>
-     <div class="space-y-4">
-      <div>
-       <h4 class="font-bold text-[var(--primary)] mb-3 flex items-center gap-2">Ingredientes</h4>
-       <ul id="modal-ings" class="space-y-2 text-sm text-gray-600 list-disc pl-4"></ul>
-      </div>
-      <div>
-       <h4 class="font-bold text-[var(--primary)] mb-3">Modo de Preparo</h4>
-       <ol id="modal-steps" class="space-y-2 text-sm text-gray-600 list-decimal pl-4"></ol>
-      </div>
-      <div class="bg-yellow-50 p-4 rounded-xl border border-yellow-100 flex gap-3 items-start">
-       <div>
-        <p class="font-bold text-yellow-800 text-sm">Dica da Chef</p>
-        <p id="modal-tip" class="text-sm text-yellow-700 italic"></p>
-       </div>
-      </div>
-      <div class="flex gap-3 pt-4"><button onclick="downloadRecipe()" class="flex-1 py-3 rounded-xl bg-[var(--primary)] text-white font-bold hover:opacity-90 transition">Guardar Receita</button> <button onclick="printRecipe()" class="flex-1 py-3 rounded-xl border-2 border-[var(--primary)] text-[var(--primary)] font-bold hover:bg-gray-50 transition">Imprimir</button>
-      </div>
-     </div>
-    </div>
-   </div>
-  </div>
-  <div id="feedback-modal" class="hidden fixed inset-0 bg-black/60 z-50 flex items-center justify-center p-4 backdrop-blur-sm">
-   <div class="bg-white rounded-2xl max-w-md w-full shadow-2xl">
-    <div class="p-8 space-y-6">
-     <div class="flex justify-between items-start">
-      <h3 class="text-2xl font-bold text-[var(--primary)]">Deixe seu depoimento</h3><button onclick="closeFeedbackForm()" class="text-xl font-bold hover:text-gray-500">✕</button>
-     </div>
-     <form id="feedback-form" onsubmit="submitFeedback(event)" class="space-y-4">
-      <div><label class="block text-sm font-bold text-gray-700 mb-2">Seu Nome</label> <input type="text" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-[var(--primary)]" placeholder="Seu nome">
-      </div>
-      <div><label class="block text-sm font-bold text-gray-700 mb-2">Email</label> <input type="email" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-[var(--primary)]" placeholder="seu@email.com">
-      </div>
-      <div><label class="block text-sm font-bold text-gray-700 mb-2">Seu Depoimento</label> <textarea required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-[var(--primary)] h-24 resize-none" placeholder="Conte sua experiência..."></textarea>
-      </div>
-      <div><label class="block text-sm font-bold text-gray-700 mb-2">Avaliação</label>
-       <div class="flex gap-3"><label><input type="radio" name="rating" value="5" required> ⭐⭐⭐⭐⭐</label> <label><input type="radio" name="rating" value="4"> ⭐⭐⭐⭐</label> <label><input type="radio" name="rating" value="3"> ⭐⭐⭐</label>
-       </div>
-      </div><button type="submit" class="w-full py-2 bg-[var(--primary)] text-white font-bold rounded-lg hover:opacity-90 transition">Enviar Depoimento</button>
-     </form>
-    </div>
-   </div>
-  </div>
-  <footer class="bg-[var(--primary)] text-white py-12 text-center border-t border-white/10">
-   <div class="container mx-auto px-6 space-y-4">
-    <div class="flex justify-center gap-6 flex-wrap"><a href="https://www.instagram.com/chefamelliebitt?igsh=aDdmMTAzaWJyd2Rw" target="_blank" rel="noopener noreferrer" class="hover:text-[var(--accent)] transition">
-      <svg class="w-6 h-6 inline" viewbox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.266.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zM5.838 12a6.162 6.162 0 1 1 12.324 0 6.162 6.162 0 0 1-12.324 0zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm4.965-10.322a1.44 1.44 0 1 1 2.881.001 1.44 1.44 0 0 1-2.881-.001z" />
-      </svg></a>  <a href="https://pay.kirvano.com/22ef5fd4-6ee2-4df6-9371-710c50758e73"
-   target="_blank"
-   rel="noopener noreferrer"
-   class="btn-gold px-6 py-2 rounded-xl font-bold shadow-md">
-   Comprar agora
-</a>
+function closeModal(){
+document.getElementById("modal").classList.add("hidden");
+}
 
-    </div>
-    <p class="text-sm opacity-60">© 2024 Chef Amellié Bittencourt. Todos os direitos reservados.</p>
-   </div>
-  </footer>
-  <script>
-    let currentRecipe = null;
-    let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
-
-    function openFeedbackForm() {
-      document.getElementById('feedback-modal').classList.remove('hidden');
-    }
-
-    function closeFeedbackForm() {
-      document.getElementById('feedback-modal').classList.add('hidden');
-      document.getElementById('feedback-form').reset();
-    }
-
-    function submitFeedback(event) {
-      event.preventDefault();
-      const nome = document.querySelector('#feedback-form input[type="text"]').value;
-      const email = document.querySelector('#feedback-form input[type="email"]').value;
-      const mensagem = document.querySelector('#feedback-form textarea').value;
-      const rating = document.querySelector('#feedback-form input[name="rating"]:checked').value;
-      
-      let feedbacks = JSON.parse(localStorage.getItem('feedbacks')) || [];
-      feedbacks.push({nome, email, mensagem, rating, data: new Date().toLocaleDateString('pt-PT')});
-      localStorage.setItem('feedbacks', JSON.stringify(feedbacks));
-      
-      closeFeedbackForm();
-      const successMsg = document.createElement('div');
-      successMsg.className = 'fixed bottom-4 right-4 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg';
-      successMsg.textContent = 'Depoimento enviado com sucesso!';
-      document.body.appendChild(successMsg);
-      setTimeout(() => successMsg.remove(), 3000);
-    }
-
-    document.getElementById('feedback-modal').addEventListener('click', function(e) {
-        if (e.target === this) closeFeedbackForm();
-    });
-
-    const recipes = [
-      { id: 1, name: "Bife à Portuguesa com Cogumelos", category: "lunch", emoji: "🥩", time: "25 min", cal: 380, prot: "42g", carbs: "8g", fat: "18g", servings: "2", ings: ["400g bife alcatra", "200g cogumelos frescos fatiados", "1 cebola roxa média", "50g azeitonas pretas", "3 dentes de alho", "2 colheres de sopa de azeite", "Sal e pimenta a gosto", "100ml de vinho branco seco"], steps: ["PREPARAÇÃO: Retire o bife do frigorífico 15 minutos antes de cozinhar para atingir temperatura ambiente. Isto garante uma cozedura uniforme.", "TEMPERO: Tempere o bife generosamente com sal, pimenta e alho picado. Deixe assentar 5 minutos para absorver os sabores.", "AQUEÇA: Aqueça uma frigideira grande em lume forte até estar muito quente. Deve estar pronta quando colocar água e esta fizer bolhas.", "SELAR: Coloque o azeite e deixe esquentar. Coloque o bife na frigideira quente e não mexa! Deixe 3 minutos para formar uma crosta dourada. Vire e repita do outro lado. Reserve num prato.", "AROMÁTICOS: Na mesma frigideira com os sucos da carne, reduza o lume para médio. Adicione a cebola fatiada, deixando cozinhar 3 minutos até ficar mole.", "COGUMELOS: Adicione os cogumelos fatiados e cozinhe por 4-5 minutos, mexendo ocasionalmente. Vão liberar a sua água e depois caramelizar.", "MOLHO: Deglaceie com o vinho branco, raspando bem o fundo da frigideira com uma colher de madeira para aproveitar todos os sucos da carne. O vinho evaporará em 2 minutos.", "TERMINAR: Volte a colocar o bife, adicione as azeitonas, cobra a frigideira com uma tampa ou folha de papel de alumínio e cozinhe 3 minutos em lume médio-baixo.", "REPOUSO: Retire o bife e deixe descansar 5 minutos num prato aquecido. Isto redistribui os sucos e mantém a carne tenra e suculenta. Sirva com o molho por cima."], tip: "Dica da Chef: Escolha sempre carnes com marmoreio de gordura - é a gordura que dá sabor! O vinho branco de boa qualidade faz toda a diferença no molho. Não pule o repouso - reduz perda de sucos." },
-      { id: 2, name: "Salada César Low Carb com Frango Grelhado", category: "lunch", emoji: "🥗", time: "15 min", cal: 320, prot: "35g", carbs: "6g", fat: "16g", servings: "2", ings: ["200g frango desfiado ou filé", "1 alface romana fresca", "30g queijo parmesão ralado", "3 colheres de sopa de iogurte grego", "1 colher de chá de mostarda de Dijon", "1 dente de alho triturado", "Suco de meio limão", "Sal e pimenta", "Azeite"], steps: ["Tempere o fil    de frango com sal, pimenta e alho. Grelhe em lume forte 5-6 minutos de cada lado até estar bem cozido.", "Deixe arrefecer e corte em tiras.", "Lave bem a alface romana e corte em tiras médias.", "Prepare o molho misturando o iogurte grego, mostarda, alho triturado, suco de limão e 1 colher de sopa de azeite.", "Tempere o molho com sal e pimenta a gosto.", "Coloque a alface numa tigela grande.", "Adicione o frango em tiras.", "Despeje o molho e misture bem.", "Finalize com o parmesão ralado e um fio de azeite."], tip: "Substitua croutons por cubos de queijo tostado ou sementes de girassol para mais crunch." },
-      { id: 3, name: "Omelete Cremosa com Espinafre e Feta", category: "breakfast", emoji: "🍳", time: "10 min", cal: 290, prot: "28g", carbs: "3g", fat: "20g", servings: "1", ings: ["3 ovos tamanho grande", "50g espinafre fresco ou congelado", "30g queijo feta esfarelado", "2 tomates cereja", "1 colher de chá de manteiga", "Sal e pimenta", "Noz-moscada (opcional)"], steps: ["PREPARAÇÃO DOS OVOS: Quebre 3 ovos numa tigela. Bata com um garfo até que as claras e gemas estejam completamente misturadas. Adicione sal, pimenta e uma pequena pitada de noz-moscada (realça os sabores).", "REFOGUE O ESPINAFRE: Numa frigideira antiaderente separada, coloque o espinafre fresco (ou congelado descongelado). Cozinhe em lume médio-alto durante 2-3 minutos, mexendo ocasionalmente até murchar. Tempere e reserve.", "AQUEÇA A FRIGIDEIRA: Coloque a frigideira antiaderente (limpa) em lume médio e deixe aquecer bem. Adicione a manteiga e deixe derreter e espumar ligeiramente.", "DESPEJE OS OVOS: Quando a manteiga está quente, despeje os ovos batidos na frigideira. Deixe cozinhar por 2-3 minutos SEM MEXER, até que as laterais estejam ligeiramente firmes mas o centro ainda esteja brilhante e mole.", "RECHEAR: Quando os ovos começam a firmar nas laterais, adicione o espinafre refogado e o queijo feta esfarelado ao centro da omelete.", "DOBRAR COM CUIDADO: Use uma espátula de silicone para levantar uma metade da omelete sobre a outra, criando uma meia-lua. Não se preocupe se não ficar perfeita!", "TERMINAR NO FOGO: Dobre a omelete e cozinhe mais 1 minuto em lume BAIXO e com a frigideira tapada (use um prato ou tampa). Isto garante que o topo fica cremoso, não seco.", "SERVIR: Transfira cuidadosamente a omelete para o prato. Decore com os tomates cereja cortados ao meio em cima.", "DICA DE OURO: Os ovos continuam a cozinhar depois de saírem do fogo, por isso retire quando ainda estiverem ligeiramente húmidos no topo."], tip: "Fogo baixo e rápido é o segredo! Omelete cremosa não pode cozinhar muito. Noz-moscada é o segredo português que falta a muitas receitas." },
-      { id: 4, name: "Salmão com Crosta de Amêndoa e Aspargos", category: "dinner", emoji: "🐟", time: "20 min", cal: 410, prot: "38g", carbs: "4g", fat: "28g", servings: "2", ings: ["1 posta de salmão 250-300g", "50g farinha de amêndoa", "30g manteiga derretida", "Suco e raspa de 1 limão", "300g aspargos frescos", "2 dentes de alho picado", "Sal e pimenta", "Azeite"], steps: ["PRÉ-AQUEÇA O FORNO: Aqueça o forno a 180°C durante 5 minutos enquanto prepara os ingredientes. Uma temperatura consistente garante cozedura uniforme.", "PREPARE A CROSTA: Numa tigela pequena, misture a farinha de amêndoa, suco fresco de limão, raspa de limão (é importante!), sal, pimenta e 1 colher de sopa de manteiga derretida. Deve formar uma mistura homogénea, quase como uma pasta. Se ficar muito seca, adicione mais limão.", "COLOQUE NA ASSADEIRA: Forrei uma assadeira com papel manteigueiro. Coloque o salmão com a PELE virada para baixo (a pele protege a carne delicada). Esta é a posição correta!", "APLIQUE A CROSTA: Pressione firmemente a mistura de amêndoa sobre o topo do salmão, criando uma camada uniforme. Use as mãos e aperte bem para que não caia durante a cozedura.", "PREPARE OS ASPARGOS: Corte cerca de 2cm da base dos aspargos (a parte lenhosa). Coloque-os à volta do salmão na assadeira.", "TEMPERE OS ASPARGOS: Regue os aspargos com azeite, polvilhe sal, pimenta e alho picado. Os aspargos são mais tolerantes às temperaturas altas que a carne de peixe.", "REMATE COM MANTEIGA: Polvilhe um pouco mais de manteiga derretida sobre o salmão e os aspargos.", "CUBRA: Cubra bem com papel manteigueiro (deixe algum espaço para circulação de ar). Isto evita que o salmão reseque durante a cozedura.", "ASSE: Coloque na posição média do forno a 180°C durante 12-15 minutos. O salmão está cozido quando se desfaz facilmente com um garfo e a crosta está dourada.", "VERIFICAÇÃO: Pode também verificar com um termómetro - salmão está pronto a 63°C internamente.", "SERVIR: Retire do forno, retire o papel com cuidado e sirva logo enquanto está quente. O salmão continua a cozinhar ligeiramente com o calor residual."], tip: "Salm  o com pele é mais fácil de manipular. A crosta de amêndoa dá proteína extra e um toque crocante delicioso!" },
-      { id: 5, name: "Mousse de Chocolate com Abacate", category: "snack", emoji: "🍫", time: "5 min", cal: 150, prot: "8g", carbs: "2g", fat: "12g", servings: "1", ings: ["1 abacate maduro", "2 colheres de sopa de cacau em pó 100%", "2 colheres de chá de eritritol", "100ml leite de coco integral", "1 colher de chá de extrato de baunilha", "Pitada de sal"], steps: ["Corte o abacate ao meio, retire o caroço e coloque a polpa numa taça.", "Adicione o cacau em pó, eritritol, leite de coco, extrato de baunilha e sal.", "Bata com uma misturadora até obter uma textura completamente suave e cremosa.", "Se ficar muito espesso, adicione um pouco mais de leite de coco.", "Divida em tacinhas pequenas.", "Leve ao frigorífico por 30 minutos para gelar.", "Sirva guarnecido com chocolate 70% ralado ou amêndoas torradas."], tip: "O abacate dá uma cremosidade natural sem qualquer gosto residual, perfeito para suavizar o cacau." },
-      { id: 6, name: "Frango Caprese com Mozzarella e Manjericão", category: "dinner", emoji: "🍗", time: "25 min", cal: 340, prot: "45g", carbs: "2g", fat: "16g", servings: "2", ings: ["2 filés de frango peito grande", "150g mu  arela fresca", "3 tomates maduros", "Folhas de manjericão fresco", "2 colheres de sopa de azeite", "Sal e pimenta", "Bálsâmico envelhecido (opcional)"], steps: ["Aplane os filés de frango com um martelo de carne até ficarem uniformes.", "Tempere-os com sal e pimenta de ambos os lados.", "Aqueça o azeite numa frigideira em lume forte.", "Grelhe os filés 4-5 minutos de cada lado até estarem bem cozidos e com uma cor dourada.", "Corte o tomate e a muçarela em fatias.", "Sobre cada filé, coloque alternadamente fatias de tomate e muçarela.", "Coloque folhas de manjericão fresco por cima.", "Tampe a frigideira e reduza o lume para médio-baixo.", "Cozinhe por 2-3 minutos até a muçarela derreter completamente.", "Retire e rega levemente com bálsâmico envelhecido se desejar."], tip: "Seque bem o frango antes de grelhar para obter uma crosta dourada e bonita." },
-      { id: 7, name: "Ovos Mexidos com Bacon e Cheddar", category: "breakfast", emoji: "🍳", time: "8 min", cal: 310, prot: "26g", carbs: "1g", fat: "24g", servings: "1", ings: ["4 ovos tamanho grande", "100g bacon fatiado", "50g queijo cheddar ralado", "1 colher de chá de manteiga", "Sal e pimenta", "Cebolinha picada (opcional)"], steps: ["Numa frigideira, cozinhe o bacon em lume médio-forte até ficar crocante, cerca de 5 minutos.", "Retire o bacon e deixe arrefecer ligeiramente, depois desmiure-o.", "Na mesma frigideira com a gordura do bacon, derreta a manteiga.", "Bata os 4 ovos numa tigela com sal, pimenta e 1 colher de sopa de leite.", "Despeje os ovos batidos na frigideira.", "Mexa constantemente com uma espátula de forma suave e lenta.", "Quando começarem a ficar firmes mas ainda brilhantes, adicione o queijo cheddar ralado.", "Misture o bacon desmiurado.", "Retire do lume quando os ovos ainda estiverem ligeiramente cremosos e húmidos (não os cozinhe muito).", "Polvilhe com cebolinha fresca se desejar."], tip: "Mexa constantemente e a fogo baixo para ovos cremosos e macios, não secos." },
-      { id: 8, name: "Caldo de Carne com Legumes Verdes", category: "snack", emoji: "🍲", time: "20 min", cal: 150, prot: "20g", carbs: "2g", fat: "7g", servings: "1", ings: ["500ml caldo de carne caseiro (ou de qualidade)", "100g carne cozida desfiada", "50g couve galega picada", "30g aipo picado", "30g cebola", "2 dentes de alho", "Azeite", "Sal e pimenta"], steps: ["Numa panela média, aqueça o caldo de carne até começar a fervir suavemente.", "Adicione a cebola picada e o alho, deixando cozinhar 2 minutos.", "Adicione o aipo picado e cozinhe mais 2 minutos.", "Coloque a carne desfiada.", "Adicione a couve galega picada.", "Cozinhe por 5 minutos até os legumes ficarem tenros mas com alguma textura.", "Tempere com sal e pimenta a gosto.", "Retire do lume e termine com um fio de azeite virgem.", "Sirva bem quente."], tip: "Faça caldo caseiro e congele em por  ões para ter sempre disponível. Muito mais nutritivo que caldo de cubo." },
-      { id: 9, name: "Bifanas Low Carb à Portuguesa", category: "lunch", emoji: "🌮", time: "22 min", cal: 380, prot: "36g", carbs: "5g", fat: "22g", servings: "2", ings: ["400g carne de porco (lomo ou páleta)", "100g cebola roxa", "100ml vinho branco seco", "2 colheres de sopa de azeite", "3 dentes de alho picado", "1 colher de chá de páprica", "1 folha de louro", "Sal e pimenta"], steps: ["Corte a carne de porco em fatias finas, aproximadamente 5mm.", "Coloque cada fatia entre dois pedaços de papel vegetal e bata com um martelo para ficar mais macia e uniforme.", "Numa frigideira grande, aqueça o azeite em lume forte.", "Sele as bifanas rapidamente, 1-2 minutos de cada lado. Reserve.", "Na mesma frigideira, reduza para lume médio e adicione a cebola fatiada.", "Cozinhe a cebola por 3-4 minutos até amaciar.", "Adicione o alho e a páprica, mexer por 1 minuto.", "Deglaceie com o vinho branco, raspe o fundo da frigideira para aproveitar todos os sucos.", "Coloque a folha de louro e volte a colocar as bifanas.", "Cozinhe por 5-7 minutos em lume médio até a carne estar bem cozida e o molho reduzir ligeiramente.", "Tempere com sal e pimenta a gosto."], tip: "Corte a carne contra o fio para ficar mais macia e suculenta." },
-      { id: 10, name: "Brócolis com Molho de Queijo e Nata", category: "snack", emoji: "🥦", time: "12 min", cal: 220, prot: "18g", carbs: "7g", fat: "14g", servings: "2", ings: ["300g brócolis fresco", "150g queijo cheddar ralado", "50ml nata culinária", "1 colher de sopa de manteiga", "1 dente de alho triturado", "Sal e pimenta", "Noz-moscada"], steps: ["Lave o brócolis e corte em floretas do tamanho de uma moeda.", "Numa panela com água ligeiramente salgada, cozinhe o brócolis por 4-5 minutos até ficar al dente (ainda com alguma firmeza).", "Enquanto o brócolis cozinha, prepare o molho: derreta a manteiga numa frigideira.", "Adicione o alho triturado e cozinhe por 30 segundos.", "Despeje a nata e deixe aquecerse sem fervir.", "Retire do lume e adicione o queijo cheddar ralado, mexendo bem até dissolver completamente.", "Tempere com sal, pimenta e uma pitada de noz-moscada.", "Escorra o brócolis bem e coloque numa taça.", "Despeje o molho de queijo sobre o brócolis e misture bem.", "Sirva imediatamente enquanto está quente."], tip: "Mantenha o brócolis al dente para não ficar muito mole. A textura é importante." },
-      { id: 11, name: "Tártara de Salmão Fresco", category: "snack", emoji: "🍣", time: "10 min", cal: 280, prot: "32g", carbs: "2g", fat: "16g", servings: "2", ings: ["300g salmão super fresco de qualidade", "30g cebola roxa", "50g abacate maduro", "Suco de 1 limão", "1 colher de chá de azeite", "Sal e pimenta", "Rúcula e microgreens (opcional)"], steps: ["Certifique-se de que o salmão é absolutamente fresco e de qualidade própria para consumo cru.", "Com uma faca bem afiada, corte o salmão em cubos pequenos e uniformes (aproximadamente 1cm).", "Pique finamente a cebola roxa.", "Corte o abacate ao meio, retire o caroço e corte em cubos também.", "Num tigela, combine o salmão e a cebola.", "Adicione o suco de limão fresco.", "Tempere com sal e pimenta a gosto.", "Regue com o azeite virgem extra.", "Adicione o abacate com cuidado, misturando suavemente para não esmagar.", "Deixe repousar no frigorífico durante 5-10 minutos para os sabores se combinarem.", "Sirva sobre uma cama de rúcula fresca se desejar."], tip: "Use apenas salmão fresco de boa qualidade. Prepare pouco antes de servir para manter fresco." },
-      { id: 12, name: "Tilápia ao Forno com Tomate e Limão", category: "dinner", emoji: "🐠", time: "25 min", cal: 320, prot: "38g", carbs: "1g", fat: "17g", servings: "2", ings: ["2 filés de tilápia 200g cada", "3 tomates maduros fatiados", "1 limão", "2 dentes de alho fatiado", "2 colheres de sopa de azeite", "Sal e pimenta", "Salsa fresca (opcional)"], steps: ["Pré-aque  a o forno a 200°C.", "Coloque os filés de tilápia numa assadeira forrada com papel manteigueiro.", "Tempere os filés com sal e pimenta de ambos os lados.", "Distribua as fatias de tomate sobre cada filé.", "Coloque as fatias de alho por cima.", "Corte o limão em rodelas finas e coloque também sobre os filés.", "Regue tudo com o azeite.", "Cubra com papel manteigueiro para evitar que reseque.", "Asse no forno a 200°C durante 12-15 minutos.", "O peixe está pronto quando se desfaz facilmente com um garfo.", "Retire do forno e decore com salsa fresca se desejar."], tip: "A tilápia é um peixe delicado. Não cozinhe demais ou fica seca. Tire do forno quando ainda est   ligeiramente húmida." },
-      { id: 13, name: "Carne de Novilho com Espinafre e Nata", category: "dinner", emoji: "🥩", time: "20 min", cal: 360, prot: "39g", carbs: "4g", fat: "20g", servings: "2", ings: ["400g carne de novilho magra em cubos", "200g espinafre fresco", "100ml nata culinária", "1 cebola média", "3 dentes de alho", "2 colheres de sopa de azeite", "Sal e pimenta", "Noz-moscada"], steps: ["Numa frigideira grande e funda, aqueça o azeite em lume forte.", "Adicione os cubos de carne e sele bem por todos os lados (aproximadamente 2 minutos). Reserve.", "Na mesma frigideira, reduza o lume para médio e salteie a cebola picada por 3 minutos.", "Adicione o alho picado e cozinhe por 1 minuto.", "Volte a colocar a carne.", "Adicione o espinafre fresco e cozinhe até murchar, cerca de 3-4 minutos.", "Despeje a nata e misture bem.", "Deixe cozinhar por 3-4 minutos, mexendo ocasionalmente.", "Tempere com sal, pimenta e uma pitada de noz-moscada.", "Certifique-se de que a carne está bem cozida mas ainda macia."], tip: "Use carne magra 5%. Não cozinhe demais ou fica dura. O espinafre fresco murcha rapidamente." },
-      { id: 14, name: "Omelete com Presunto e Queijo Suíço", category: "breakfast", emoji: "🧀", time: "8 min", cal: 280, prot: "25g", carbs: "2g", fat: "20g", servings: "1", ings: ["3 ovos tamanho grande", "100g presunto fatias", "50g queijo suíço ralado", "1 colher de chá de manteiga", "Sal e pimenta", "1 tomate pequeno (opcional)"], steps: ["Bata os 3 ovos numa tigela com sal e pimenta.", "Numa frigideira antiaderente, derreta a manteiga em lume médio.", "Quando a manteiga está quente e espumosa, despeje os ovos batidos.", "Deixe cozinhar por 2-3 minutos sem mexer, até que as laterais estejam firmes.", "Aqueça o presunto ligeiramente (pode colocar por cima do omelete ou separadamente).", "Quando o topo ainda estiver ligeiramente húmido, adicione o presunto e o queijo suíço ao centro.", "Com uma espátula, dobre a omelete ao meio cuidadosamente.", "Cozinhe por mais 1 minuto em lume baixo.", "Transfira para um prato e sirva imediatamente, guarnecendo com tomate fresco se desejar."], tip: "Dobre ligeiramente húmida para manter a textura macia. Não cozinhe em demasia." },
-      { id: 15, name: "Costelas de Porco Marinadas", category: "lunch", emoji: "🍖", time: "28 min", cal: 420, prot: "42g", carbs: "1g", fat: "28g", servings: "2", ings: ["500g costelas de porco", "3 colheres de sopa de azeite", "2 colheres de sopa de mostarda forte", "2 dentes de alho triturado", "1 colher de chá de páprica", "Suco de 1 limão", "Sal e pimenta", "Tomilho fresco"], steps: ["Prepare a marinada combinando o azeite, mostarda, alho triturado, p    prica, suco de limão, sal, pimenta e tomilho.", "Coloque as costelas num recipiente e despeje a marinada, massajando bem para garantir que todas as costelas ficam cobertas.", "Deixe marinar no frigorífico durante 2 horas (ou mais se possível).", "Retire as costelas do frigorífico 15 minutos antes de grelhar.", "Aqueça a grelha ou frigideira em lume forte.", "Coloque as costelas na grelha quente.", "Grelhe 12 minutos de um lado mantendo a marinada, depois vire e grelhe 12 minutos do outro lado.", "A carne deve ficar bem cozida e com um ligeiro tom caramelizado.", "Deixe descansar 5 minutos antes de servir."], tip: "A marinada é crucial para o sabor. Quanto mais tempo deixar (até 24 horas), melhor o resultado." }
-    ];
-
-    function renderRecipes(filter = 'all') {
-      const grid = document.getElementById('recipes-grid');
-      grid.innerHTML = '';
-      
-      const filtered = filter === 'all' 
-        ? recipes 
-        : recipes.filter(r => r.category === filter);
-
-      filtered.forEach(recipe => {
-        const isFav = favorites.includes(recipe.id);
-        const card = document.createElement('div');
-        card.className = `recipe-card bg-white rounded-2xl shadow-sm border border-gray-100 flex flex-col overflow-hidden hover:shadow-lg transition ${isFav ? 'favorited border-2 border-[var(--accent)]' : ''}`;
-        card.id = `card-${recipe.id}`;
-        card.onclick = () => openRecipeModal(recipe.id);
-        
-        card.innerHTML = `
-          <div class="relative h-48 bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center overflow-hidden group">
-            <div class="absolute inset-0 bg-gradient-to-br from-[var(--accent)]/5 to-transparent"></div>
-            <div class="text-7xl animate-bounce group-hover:scale-110 transition duration-300">${recipe.emoji}</div>
-            <button onclick="event.stopPropagation(); toggleFavoriteCard(${recipe.id})" class="absolute top-3 right-3 text-2xl bg-white rounded-full w-10 h-10 flex items-center justify-center shadow-lg hover:scale-110 transition fav-icon">${isFav ? '❤  ' : '🤍'}</button>
-          </div>
-          <div class="p-5 flex flex-col gap-3 flex-grow">
-            <div>
-              <h4 class="font-bold text-[var(--primary)] text-base line-clamp-2">${recipe.name}</h4>
-            </div>
-            <div class="space-y-2">
-              <div class="flex items-center gap-2 text-xs text-gray-600">
-                <span>   ️</span> <span class="font-medium">${recipe.time}</span>
-              </div>
-              <div class="flex items-center gap-2 text-xs text-green-600 font-medium">
-                <span>    </span> <span>${recipe.prot}</span>
-              </div>
-            </div>
-            <div class="flex gap-2 text-xs flex-wrap">
-              <span class="px-2 py-1 rounded-full bg-yellow-100 text-yellow-800 font-semibold text-[10px]">🔥 ${recipe.cal}</span>
-              <span class="px-2 py-1 rounded-full bg-orange-100 text-orange-800 font-semibold text-[10px]">${recipe.carbs}</span>
-              <span class="px-2 py-1 rounded-full bg-blue-100 text-blue-800 font-semibold text-[10px]">${recipe.fat}</span>
-            </div>
-            <button class="w-full mt-auto py-2 rounded-lg bg-[var(--primary)]/5 text-[var(--primary)] font-bold text-xs hover:bg-[var(--primary)] hover:text-white transition">Ver Receita</button>
-          </div>
-        `;
-        grid.appendChild(card);
-      });
-    }
-
-    function renderFavorites() {
-      const grid = document.getElementById('favorites-grid');
-      const noFav = document.getElementById('no-favorites');
-      grid.innerHTML = '';
-
-      if (favorites.length === 0) {
-        noFav.style.display = 'block';
-        return;
-      }
-
-      noFav.style.display = 'none';
-      const favRecipes = recipes.filter(r => favorites.includes(r.id));
-
-      favRecipes.forEach(recipe => {
-        const card = document.createElement('div');
-        card.className = 'recipe-card bg-white rounded-2xl p-6 shadow-sm border-2 border-[var(--accent)] flex flex-col gap-4 favorited';
-        card.id = `fav-card-${recipe.id}`;
-        card.onclick = () => openRecipeModal(recipe.id);
-        
-        card.innerHTML = `
-          <div class="flex justify-between items-start">
-            <div>
-              <h4 class="font-bold text-[var(--primary)] text-lg">${recipe.name}</h4>
-              <span class="text-3xl mt-2">${recipe.emoji}</span>
-            </div>
-            <button onclick="event.stopPropagation(); toggleFavoriteCard(${recipe.id})" class="text-2xl hover:scale-110 transition">❤️</button>
-          </div>
-          <div class="space-y-2 bg-gray-50 p-4 rounded-lg">
-            <div class="flex items-center gap-2 text-sm text-gray-600">
-              <span>   ️</span> <span class="font-medium">${recipe.time}</span>
-            </div>
-            <div class="flex items-center gap-2 text-sm text-green-600 font-medium">
-              <span>    </span> <span>${recipe.prot}</span>
-            </div>
-            <div class="flex gap-2 text-xs flex-wrap">
-              <span class="px-2 py-1 rounded bg-yellow-100 text-yellow-800 font-semibold">🔥 ${recipe.cal} kcal</span>
-              <span class="px-2 py-1 rounded bg-orange-100 text-orange-800 font-semibold">${recipe.carbs} carbs</span>
-              <span class="px-2 py-1 rounded bg-blue-100 text-blue-800 font-semibold">${recipe.fat} g</span>
-            </div>
-          </div>
-          <button class="w-full mt-auto py-2 rounded-lg bg-[var(--primary)]/5 text-[var(--primary)] font-bold text-sm hover:bg-[var(--primary)] hover:text-white transition">Ver Receita Completa</button>
-        `;
-        grid.appendChild(card);
-      });
-    }
-
-    function filterRecipes(category, btn) {
-        document.querySelectorAll('.recipe-filter').forEach(b => {
-            b.classList.remove('active', 'bg-[var(--primary)]', 'text-white', 'border-[var(--primary)]');
-            b.classList.add('text-gray-600', 'border-gray-300');
-        });
-        
-        btn.classList.remove('text-gray-600', 'border-gray-300');
-        btn.classList.add('active', 'bg-[var(--primary)]', 'text-white', 'border-[var(--primary)]');
-        
-        renderRecipes(category);
-    }
-
-    function openRecipeModal(id) {
-      currentRecipe = recipes.find(r => r.id === id);
-      if (!currentRecipe) return;
-
-      document.getElementById('modal-name').textContent = currentRecipe.name;
-      document.getElementById('modal-tag').textContent = currentRecipe.emoji;
-      document.getElementById('modal-time').textContent = currentRecipe.time;
-      document.getElementById('modal-cal').textContent = currentRecipe.cal;
-      document.getElementById('modal-prot').textContent = currentRecipe.prot;
-      document.getElementById('modal-carbs').textContent = currentRecipe.carbs;
-      document.getElementById('modal-fat').textContent = currentRecipe.fat;
-      document.getElementById('modal-servings').textContent = currentRecipe.servings;
-      document.getElementById('modal-tip').textContent = currentRecipe.tip;
-
-      const favBtn = document.getElementById('fav-btn');
-      favBtn.textContent = favorites.includes(id) ? '❤  ' : '🤍';
-
-      const ingList = document.getElementById('modal-ings');
-      ingList.innerHTML = currentRecipe.ings.map(ing => `<li>${ing}</li>`).join('');
-
-      const stepList = document.getElementById('modal-steps');
-      stepList.innerHTML = currentRecipe.steps.map(step => `<li class="pl-2">${step}</li>`).join('');
-
-      document.getElementById('recipe-modal').classList.remove('hidden');
-    }
-
-    function closeRecipeModal() {
-      document.getElementById('recipe-modal').classList.add('hidden');
-      currentRecipe = null;
-    }
-
-    function toggleFavorite() {
-      if (!currentRecipe) return;
-      toggleFavoriteCard(currentRecipe.id);
-      const favBtn = document.getElementById('fav-btn');
-      favBtn.textContent = favorites.includes(currentRecipe.id) ? '❤️' : '  ';
-    }
-
-    function toggleFavoriteCard(id) {
-      if (favorites.includes(id)) {
-        favorites = favorites.filter(f => f !== id);
-      } else {
-        favorites.push(id);
-      }
-      localStorage.setItem('favorites', JSON.stringify(favorites));
-      renderRecipes('all');
-      renderFavorites();
-      if (document.getElementById(`card-${id}`)) {
-        document.getElementById(`card-${id}`).querySelector('.fav-icon').textContent = favorites.includes(id) ? '❤️' : '    ';
-      }
-    }
-
-    function downloadRecipe() {
-      if (!currentRecipe) return;
-      let text = `${currentRecipe.name} ${currentRecipe.emoji}\n`;
-      text += `${'='.repeat(40)}\n\n`;
-      text += `⏱️ Tempo: ${currentRecipe.time}\n`;
-      text += `🔥 Calorias: ${currentRecipe.cal} kcal\n`;
-      text += `💪 Proteína: ${currentRecipe.prot}\n`;
-      text += `🍞 Carbs: ${currentRecipe.carbs}\n`;
-      text += `   Gordura: ${currentRecipe.fat}\n`;
-      text += `      Pessoas: ${currentRecipe.servings}\n\n`;
-      text += `INGREDIENTES:\n${'-'.repeat(40)}\n${currentRecipe.ings.map(i => '• ' + i).join('\n')}\n\n`;
-      text += `MODO DE PREPARO:\n${'-'.repeat(40)}\n${currentRecipe.steps.map((s, i) => `${i + 1}. ${s}`).join('\n')}\n\n`;
-      text += `💡 DICA: ${currentRecipe.tip}`;
-      
-      const element = document.createElement('a');
-      element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
-      element.setAttribute('download', `${currentRecipe.name}.txt`);
-      element.click();
-    }
-
-    function printRecipe() {
-      if (!currentRecipe) return;
-      const printWindow = window.open('', '', 'width=800,height=600');
-      printWindow.document.write(`
-        <html>
-          <head>
-            <title>${currentRecipe.name}</title>
-            <style>
-              body { font-family: Arial; padding: 20px; line-height: 1.6; }
-              h1 { color: #6b2d3d; border-bottom: 2px solid #c17a7a; padding-bottom: 10px; }
-              h2 { color: #6b2d3d; margin-top: 20px; }
-              .info { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; background: #f5f5f5; padding: 10px; margin: 15px 0; border-radius: 5px; }
-              .info-item { text-align: center; }
-              li { margin-bottom: 5px; }
-              .tip { background: #fff3cd; padding: 10px; border-radius: 5px; margin-top: 20px; }
-            </style>
-          </head>
-          <body>
-            <h1>${currentRecipe.name} ${currentRecipe.emoji}</h1>
-            <div class="info">
-              <div class="info-item"><strong>Tempo:</strong> ${currentRecipe.time}</div>
-              <div class="info-item"><strong>Calorias:</strong> ${currentRecipe.cal}</div>
-              <div class="info-item"><strong>Proteína:</strong> ${currentRecipe.prot}</div>
-              <div class="info-item"><strong>Carbs:</strong> ${currentRecipe.carbs}</div>
-            </div>
-            <h2>Ingredientes</h2>
-            <ul>${currentRecipe.ings.map(i => '<li>' + i + '</li>').join('')}</ul>
-            <h2>Modo de Preparo</h2>
-            <ol>${currentRecipe.steps.map(s => '<li>' + s + '</li>').join('')}</ol>
-            <div class="tip"><strong>💡 Dica da Chef:</strong> ${currentRecipe.tip}</div>
-          <script>
-/* Evento de Scroll 60% */
-let scrollTracked = false;
-
-window.addEventListener('scroll', function() {
-  if (!scrollTracked) {
-    const scrollPercent = (window.scrollY + window.innerHeight) / document.body.scrollHeight;
-    if (scrollPercent > 0.6) {
-      fbq('trackCustom', 'Scroll60');
-      scrollTracked = true;
-    }
-  }
-});
+render();
 </script>
 
 </body>
-        </html>
-      `);
-      printWindow.document.close();
-      printWindow.print();
-    }
-
-    document.getElementById('recipe-modal').addEventListener('click', function(e) {
-        if (e.target === this) closeRecipeModal();
-    });
-
-    function renderTestimonials() {
-      const feedbacks = JSON.parse(localStorage.getItem('feedbacks')) || [];
-      const grid = document.getElementById('testimonials-grid');
-      grid.innerHTML = '';
-
-      if (feedbacks.length === 0) {
-        grid.innerHTML = `
-          <div class="col-span-full text-center py-12">
-            <p class="text-white/60 text-lg">Seja o primeiro a deixar seu depoimento!</p>
-          </div>
-        `;
-        return;
-      }
-
-      // Show latest 3 testimonials
-      const latestFeedbacks = feedbacks.slice(-3).reverse();
-      
-      latestFeedbacks.forEach((feedback, index) => {
-        const stars = Array(parseInt(feedback.rating)).fill('★').join('');
-        const card = document.createElement('div');
-        card.className = 'bg-white/10 backdrop-blur-sm p-6 rounded-2xl border border-white/20 hover:border-white/40 transition';
-        card.style.animationDelay = `${index * 0.1}s`;
-        card.innerHTML = `
-          <div class="flex items-start justify-between mb-3">
-            <div>
-              <h4 class="font-bold text-white text-lg">${feedback.nome}</h4>
-              <p class="text-white/60 text-xs">${feedback.data}</p>
-            </div>
-            <div class="text-lg">${stars}</div>
-          </div>
-          <p class="text-white/80 text-sm leading-relaxed italic">"${feedback.mensagem}"</p>
-        `;
-        grid.appendChild(card);
-      });
-    }
-
-    renderRecipes();
-    renderFavorites();
-    renderTestimonials();
-
-    // Listen for storage changes to update testimonials in real-time
-    window.addEventListener('storage', renderTestimonials);
-  </script>
- <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9cc08563a7976f7f',t:'MTc3MDc3ODA0MS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
+
 
 
